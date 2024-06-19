@@ -1,0 +1,7 @@
+/home/dalia/Documentos/Calibre
+
+/home/dalia/**/*.flac
+/home/dalia/**/*.mp3
+
+/home/dalia/**/*.mkv
+/home/dalia/**/*.mp4
