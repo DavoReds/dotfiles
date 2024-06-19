@@ -1,0 +1,41 @@
+{...}: {
+  imports = [
+    ./cli/bat.nix
+    ./cli/btop.nix
+    ./cli/cliphist.nix
+    ./cli/dprint.nix
+    ./cli/eza.nix
+    ./cli/fzf.nix
+    ./cli/git.nix
+    ./cli/helix.nix
+    ./cli/jujutsu.nix
+    ./cli/just.nix
+    ./cli/lf.nix
+    ./cli/mpd.nix
+    ./cli/ncmpcpp.nix
+    ./cli/ncspot.nix
+    ./cli/neovim.nix
+    ./cli/pass.nix
+    ./cli/restic.nix
+    ./cli/sqlite.nix
+    ./cli/starship.nix
+    ./cli/tasker.nix
+    ./cli/tmux.nix
+    ./cli/topgrade.nix
+    ./cli/zoxide.nix
+    ./cli/zsh.nix
+
+    ./gui/alacritty.nix
+    ./gui/amberol.nix
+    ./gui/gnome-extensions.nix
+    ./gui/hyprland.nix
+    ./gui/mako.nix
+    ./gui/mpv.nix
+    ./gui/remmina.nix
+    ./gui/swappy.nix
+    ./gui/swaylock.nix
+    ./gui/tofi.nix
+    ./gui/waybar.nix
+    ./gui/zathura.nix
+  ];
+}

@@ -1,0 +1,484 @@
+{
+  lib,
+  config,
+  ...
+}: {
+  options.helix = {
+    enable = lib.mkEnableOption "Installs and configures helix";
+    defaultEditor = lib.mkOption {
+      type = lib.types.bool;
+      description = "Make Helix the default editor";
+      default = false;
+    };
+  };
+
+  config = lib.mkIf config.helix.enable {
+    programs.helix = {
+      enable = true;
+      defaultEditor = config.helix.defaultEditor;
+      catppuccin = {
+        useItalics = true;
+      };
+
+      settings = {
+        editor = {
+          line-number = "relative";
+          scrolloff = 8;
+          mouse = true;
+          middle-click-paste = true;
+          gutters = ["diagnostics" "spacer" "line-numbers" "spacer" "diff"];
+          bufferline = "multiple";
+          color-modes = true;
+          auto-format = true;
+          true-color = true;
+          text-width = 80;
+          rulers = [81];
+          cursorline = true;
+          insert-final-newline = false;
+          popup-border = "all";
+          indent-heuristic = "tree-sitter";
+          auto-completion = true;
+          preview-completion-insert = false;
+          completion-trigger-len = 1;
+
+          statusline = {
+            left = ["mode" "spacer" "spinner" "spacer" "version-control"];
+            center = ["file-name" "file-type" "file-modification-indicator" "read-only-indicator"];
+            right = ["diagnostics" "workspace-diagnostics" "position" "total-line-numbers" "position-percentage" "spacer" "register"];
+          };
+
+          cursor-shape = {
+            insert = "bar";
+            normal = "block";
+            select = "underline";
+          };
+
+          file-picker = {
+            hidden = false;
+          };
+
+          auto-pairs = true;
+
+          indent-guides = {
+            render = true;
+            character = "┆";
+            skip-levels = 1;
+          };
+
+          lsp = {
+            display-messages = true;
+            display-signature-help-docs = true;
+            display-inlay-hints = false;
+            auto-signature-help = true;
+            snippets = true;
+          };
+
+          smart-tab = {
+            enable = false;
+          };
+        };
+
+        keys.normal = {
+          H = ":buffer-previous";
+          L = ":buffer-next";
+
+          space = {
+            b.c = ":buffer-close!";
+            e = [":new" ":insert-output lf" ":buffer-close!" ":redraw"];
+          };
+        };
+
+        keys.insert = {
+          C-e = "completion";
+          C-f = "move_parent_node_end";
+        };
+      };
+
+      languages = {
+        language-server = {
+          pyright-langserver = {
+            command = "pyright-langserver";
+            args = ["--stdio"];
+          };
+
+          emmet-ls = {
+            command = "emmet-ls";
+            args = ["--stdio"];
+          };
+
+          vscode-html-language-server = {
+            command = "vscode-html-language-server";
+            args = ["--stdio"];
+          };
+
+          vscode-css-language-server = {
+            command = "vscode-css-language-server";
+            args = ["--stdio"];
+          };
+
+          templ = {
+            command = "templ";
+            args = ["lsp"];
+          };
+
+          htmx = {
+            command = "htmx-lsp";
+            args = [""];
+          };
+
+          tinymist = {
+            command = "tinymist";
+          };
+
+          markdown-oxide = {
+            command = "markdown-oxide";
+            args = [""];
+          };
+        };
+
+        language = [
+          {
+            name = "python";
+            language-servers = ["pyright-langserver"];
+            indent = {
+              tab-width = 2;
+              unit = "  ";
+            };
+            formatter = {
+              command = "dprint";
+              args = ["fmt" "--stdin" "py"];
+            };
+            auto-format = true;
+          }
+
+          {
+            name = "rust";
+            auto-format = true;
+          }
+
+          {
+            name = "zig";
+            auto-format = true;
+          }
+
+          {
+            name = "c";
+            indent = {
+              tab-width = 2;
+              unit = "  ";
+            };
+            formatter = {
+              command = "clang-format";
+              args = ["--style" "Chromium"];
+            };
+            auto-format = true;
+          }
+
+          {
+            name = "javascript";
+            indent = {
+              tab-width = 2;
+              unit = "  ";
+            };
+            formatter = {
+              command = "dprint";
+              args = ["fmt" "--stdin" "js"];
+            };
+            auto-format = true;
+          }
+
+          {
+            name = "typescript";
+            indent = {
+              tab-width = 2;
+              unit = "  ";
+            };
+            formatter = {
+              command = "dprint";
+              args = ["fmt" "--stdin" "ts"];
+            };
+            auto-format = true;
+          }
+
+          {
+            name = "jsx";
+            indent = {
+              tab-width = 2;
+              unit = "  ";
+            };
+            formatter = {
+              command = "dprint";
+              args = ["fmt" "--stdin" "jsx"];
+            };
+            auto-format = true;
+            auto-pairs = {
+              "<" = ">";
+              "(" = ")";
+              "{" = "}";
+              "[" = "]";
+              "\"" = "\"";
+              "'" = "'";
+              "`" = "`";
+            };
+          }
+
+          {
+            name = "tsx";
+            indent = {
+              tab-width = 2;
+              unit = "  ";
+            };
+            formatter = {
+              command = "dprint";
+              args = ["fmt" "--stdin" "tsx"];
+            };
+            auto-format = true;
+            auto-pairs = {
+              "<" = ">";
+              "(" = ")";
+              "{" = "}";
+              "[" = "]";
+              "\"" = "\"";
+              "'" = "'";
+              "`" = "`";
+            };
+          }
+
+          {
+            name = "html";
+            indent = {
+              tab-width = 2;
+              unit = "  ";
+            };
+            language-servers = [
+              {
+                name = "emmet-ls";
+                only-features = ["completion"];
+              }
+              "vscode-html-language-server"
+              "htmx"
+            ];
+            auto-format = true;
+            auto-pairs = {
+              "<" = ">";
+              "(" = ")";
+              "{" = "}";
+              "[" = "]";
+              "\"" = "\"";
+              "'" = "'";
+              "`" = "`";
+            };
+          }
+
+          {
+            name = "css";
+            indent = {
+              tab-width = 2;
+              unit = "  ";
+            };
+            language-servers = [
+              {
+                name = "emmet-ls";
+                only-features = ["completion"];
+              }
+              "vscode-css-language-server"
+            ];
+            formatter = {
+              command = "dprint";
+              args = ["fmt" "--stdin" "css"];
+            };
+            auto-format = true;
+            auto-pairs = {
+              "<" = ">";
+              "(" = ")";
+              "{" = "}";
+              "[" = "]";
+              "\"" = "\"";
+              "'" = "'";
+              "`" = "`";
+            };
+          }
+
+          {
+            name = "json";
+            indent = {
+              tab-width = 2;
+              unit = "  ";
+            };
+            formatter = {
+              command = "dprint";
+              args = ["fmt" "--stdin" "json"];
+            };
+            auto-format = true;
+          }
+
+          {
+            name = "go";
+            auto-format = true;
+          }
+
+          {
+            name = "markdown";
+            language-servers = ["markdown-oxide"];
+            formatter = {
+              command = "dprint";
+              args = ["fmt" "--stdin" "md"];
+            };
+            auto-format = true;
+            soft-wrap = {
+              enable = true;
+              wrap-indicator = "";
+              wrap-at-text-width = true;
+            };
+            auto-pairs = {
+              "(" = ")";
+              "{" = "}";
+              "[" = "]";
+              "\"" = "\"";
+              "'" = "'";
+              "`" = "`";
+            };
+          }
+
+          {
+            name = "toml";
+            auto-format = true;
+            auto-pairs = {
+              "(" = ")";
+              "{" = "}";
+              "[" = "]";
+              "\"" = "\"";
+              "'" = "'";
+              "`" = "`";
+              "$" = "$";
+            };
+          }
+
+          {
+            name = "lua";
+            indent = {
+              tab-width = 2;
+              unit = "  ";
+            };
+            formatter = {
+              command = "stylua";
+              args = ["--indent-type" "Spaces" "-"];
+            };
+            auto-format = true;
+          }
+
+          {
+            name = "sql";
+            formatter = {
+              command = "dprint";
+              args = ["fmt" "--stdin" "sql"];
+            };
+            auto-format = true;
+          }
+
+          {
+            name = "dockerfile";
+            formatter = {
+              command = "dprint";
+              args = ["fmt" "--stdin" "./Dockerfile"];
+            };
+            auto-format = true;
+          }
+
+          {
+            name = "yaml";
+            indent = {
+              tab-width = 2;
+              unit = "  ";
+            };
+            formatter = {
+              command = "dprint";
+              args = ["fmt" "--stdin" "yaml"];
+            };
+            auto-format = true;
+          }
+
+          {
+            name = "templ";
+            language-servers = [
+              "templ"
+              {
+                name = "emmet-ls";
+                only-features = ["completion"];
+              }
+              "vscode-html-language-server"
+              "htmx"
+            ];
+            formatter = {
+              command = "templ";
+              args = ["fmt"];
+            };
+            auto-format = true;
+          }
+
+          {
+            name = "jinja";
+            language-servers = [
+              {
+                name = "emmet-ls";
+                only-features = ["completion"];
+              }
+              "vscode-html-language-server"
+              "htmx"
+            ];
+            formatter = {
+              command = "djlint";
+              args = ["-" "--reformat" "--indent" "2"];
+            };
+            auto-format = true;
+          }
+
+          {
+            name = "haskell";
+            indent = {
+              tab-width = 2;
+              unit = "  ";
+            };
+            formatter = {
+              command = "ormolu";
+              args = ["-"];
+            };
+            auto-format = true;
+          }
+
+          {
+            name = "nix";
+            indent = {
+              tab-width = 2;
+              unit = " ";
+            };
+            formatter = {
+              command = "alejandra";
+              args = ["-"];
+            };
+            auto-format = true;
+          }
+
+          {
+            name = "typst";
+            language-servers = ["tinymist"];
+            formatter = {
+              command = "typstfmt";
+              args = ["-o" "-"];
+            };
+            auto-format = true;
+          }
+
+          {
+            name = "ocaml";
+            formatter = {
+              command = "ocamlformat";
+              args = ["-" "--impl"];
+            };
+            auto-format = true;
+          }
+        ];
+      };
+    };
+  };
+}
