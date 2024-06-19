@@ -11,6 +11,7 @@
     ./cli/helix.nix
     ./cli/jujutsu.nix
     ./cli/just.nix
+    ./cli/lazygit.nix
     ./cli/lf.nix
     ./cli/mpd.nix
     ./cli/ncmpcpp.nix

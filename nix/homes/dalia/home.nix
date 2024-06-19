@@ -211,7 +211,6 @@
     user = "Dalia Rojas Vallejo";
     email = "daliarojasvallejo@proton.me";
   };
-  gitui.enable = true;
   helix.enable = true;
   jujutsu = {
     enable = true;
@@ -220,6 +219,7 @@
     delta = true;
   };
   just.enable = true;
+  lazygit.enable = true;
   neovim = {
     enable = true;
     defaultEditor = true;
