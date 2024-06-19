@@ -1,0 +1,3 @@
+[config]
+"nix/nixosModules/secrets/ferroserver-endpoint.nix" = ["age1c4u7832ejztpvca4mxj6nkahte566reym0lt0992sh7ev9mch4cqfuwrgn"]
+"nix/nixosModules/secrets/dalinux-endpoint.nix" = ["age1c4u7832ejztpvca4mxj6nkahte566reym0lt0992sh7ev9mch4cqfuwrgn"]
