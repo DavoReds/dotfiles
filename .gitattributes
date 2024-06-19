@@ -1,1 +1,1 @@
-nix/nixosModules/secrets/** filter=git-agecrypt diff=git-agecrypt
+nix/nixosModules/secrets/** filter=git-crypt diff=git-crypt

@@ -1,9 +1,0 @@
-[config]
-"nix/nixosModules/secrets/dalinux-endpoint.nix" = [
-    "age1c4u7832ejztpvca4mxj6nkahte566reym0lt0992sh7ev9mch4cqfuwrgn",
-    "age1fwuxts6uktmu84wnf87fswdnrq2jjrqmx4ajehgcre2ma544wupqpph6kw",
-]
-"nix/nixosModules/secrets/ferroserver-endpoint.nix" = [
-    "age1c4u7832ejztpvca4mxj6nkahte566reym0lt0992sh7ev9mch4cqfuwrgn",
-    "age1fwuxts6uktmu84wnf87fswdnrq2jjrqmx4ajehgcre2ma544wupqpph6kw",
-]
