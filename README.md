@@ -7,32 +7,50 @@ Here are all the configuration files for all the programs I use. My config is do
 These are all the programs that are not defined in a nix file and therefore can be copy pasted without issues:
 
 1. dprint
-2. SQLite
-3. nbfc
-4. Tmux
-5. [Tasker-cli](https://github.com/DavoReds/tasker)
-6. Neovim
-7. Swappy
+2. nbfc
+3. Neovim
+4. SQLite
+5. Swappy
+6. [Tasker-cli](https://github.com/DavoReds/tasker)
+7. Tmux
 
 ## Home-Manager
 
 These are all the programs that are configured using home-manager modules, and therefore need this program to use the configuration:
 
-1. Bat
-2. Eza
-3. FZF
-4. Git
-5. Helix
-6. Jujutsu
-7. LF (additional icon file required and provided in the repo)
-8. MPD
-9. ncmpcpp
-10. ncspot
-11. password-store
-12. Starship
-13. Topgrade
-14. Zoxide
-15. Zsh
+1. Alacritty
+2. Amberol
+3. Bat
+4. Btop
+5. Cliphist
+6. Eza
+7. FZF
+8. Git
+9. Gitui
+10. Helix
+11. Hyprland
+12. Hyprpaper*
+13. Hypridle*
+14. Jujutsu
+15. Lazygit
+16. LF (additional icon file required and provided in the repo)
+17. Mako
+18. MPD
+19. MPV
+20. ncmpcpp
+21. ncspot
+22. password-store
+23. Remmina
+24. Swaylock
+25. Starship
+26. Tofi
+27. Topgrade
+28. Waybar
+29. Zathura
+30. Zoxide
+31. Zsh
+
+\* These programs are configured in my `home.nix` configuration file instead of their own module because having so many programs to make Hyprland usable annoys me and I didn't have the energy to modularize them.
 
 ---
 
