@@ -211,6 +211,7 @@
     user = "Dalia Rojas Vallejo";
     email = "daliarojasvallejo@proton.me";
   };
+  gitui.enable = true;
   helix.enable = true;
   jujutsu = {
     enable = true;
@@ -274,6 +275,7 @@
     calibre
     discord
     du-dust
+    git-agecrypt
     heroic
     imv
     kondo

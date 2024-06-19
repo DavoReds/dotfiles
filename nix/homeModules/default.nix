@@ -7,6 +7,7 @@
     ./cli/eza.nix
     ./cli/fzf.nix
     ./cli/git.nix
+    ./cli/gitui.nix
     ./cli/helix.nix
     ./cli/jujutsu.nix
     ./cli/just.nix
