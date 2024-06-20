@@ -275,7 +275,7 @@
     calibre
     discord
     du-dust
-    git-agecrypt
+    git-crypt
     heroic
     imv
     kondo
