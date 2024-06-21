@@ -9,15 +9,20 @@ in {
   options.tofi.enable = mkEnableOption "Enables and configures tofi";
 
   config = mkIf cfg.enable {
-    stylix.targets.tofi.enable = true;
-
     programs.tofi = {
       enable = true;
+      catppuccin = {
+        enable = true;
+        flavor = "mocha";
+      };
 
       settings = {
+        font = "Iosevka Comfy";
+        font-size = 12;
         hint-font = false;
 
         border-width = 4;
+        border-color = "#fab387";
         corner-radius = 4;
         height = "50%";
         width = "50%";
