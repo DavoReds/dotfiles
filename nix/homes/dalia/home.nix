@@ -281,6 +281,7 @@
     kondo
     newsflash
     nodejs
+    obsidian
     onlyoffice-bin_latest
     ouch
     overskride
