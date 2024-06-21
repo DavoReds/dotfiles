@@ -17,15 +17,18 @@ in {
       };
 
       settings = {
-        font = "Iosevka Comfy";
-        font-size = 12;
+        font = "ZedMono Nerd Font";
+        font-size = 14;
         hint-font = false;
 
+        # Theme
+        width = "50%";
+        height = "50%";
         border-width = 4;
         border-color = "#fab387";
-        corner-radius = 4;
-        height = "50%";
-        width = "50%";
+        outline-width = 0;
+        result-spacing = 8;
+        num-results = 8;
 
         auto-accept-single = false;
         drun-launch = true;
