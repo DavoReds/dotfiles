@@ -28,7 +28,6 @@
   config = lib.mkIf config.gaming.enable {
     hardware.opengl = {
       enable = true;
-      driSupport = true;
       driSupport32Bit = true;
     };
 
