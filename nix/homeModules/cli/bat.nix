@@ -6,10 +6,12 @@
   options.bat.enable = lib.mkEnableOption "Enables and configures Bat";
 
   config = lib.mkIf config.bat.enable {
-    stylix.targets.bat.enable = true;
-
     programs.bat = {
       enable = true;
+      catppuccin = {
+        enable = true;
+        flavor = "mocha";
+      };
 
       config = {
         map-syntax = [
