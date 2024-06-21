@@ -11,17 +11,14 @@ in {
   };
 
   config = mkIf cfg.enable {
+    stylix.targets.mako.enable = true;
+
     services.mako = {
       enable = true;
-      catppuccin = {
-        enable = true;
-        flavor = "mocha";
-      };
 
       borderRadius = 4;
       borderSize = 4;
       defaultTimeout = 3000;
-      font = "Iosevka Comfy 12";
       ignoreTimeout = true;
       padding = "8";
     };

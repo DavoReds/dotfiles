@@ -24,11 +24,6 @@
   };
 
   # Theming
-  catppuccin = {
-    enable = true;
-    accent = "peach";
-    flavor = "mocha";
-  };
 
   # Allow home-manager to configure XDG directories
   xdg = {

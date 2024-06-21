@@ -6,6 +6,8 @@
   options.fzf.enable = lib.mkEnableOption "Enables and configures FZF";
 
   config = lib.mkIf config.fzf.enable {
+    stylix.targets.fzf.enable = true;
+
     programs.fzf = {
       enable = true;
       enableZshIntegration = true;

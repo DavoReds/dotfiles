@@ -32,32 +32,18 @@
   };
 
   # Theming
-  catppuccin = {
-    enable = true;
-    accent = "peach";
-    flavor = "mocha";
+  defaultStylix.enable = true;
+  stylix.targets = {
+    gtk.enable = true;
   };
   gtk = {
     enable = true;
-    font = {
-      name = "Iosevka Comfy";
-      size = 11;
-    };
     iconTheme = {
       package = pkgs.catppuccin-papirus-folders.override {
         flavor = "mocha";
         accent = "peach";
       };
       name = "Papirus-Dark";
-    };
-    theme = {
-      package = pkgs.catppuccin-gtk.override {
-        accents = ["peach"];
-        size = "standard";
-        tweaks = ["normal"];
-        variant = "mocha";
-      };
-      name = "Catppuccin-Mocha-Standard-Peach-Dark";
     };
   };
   qt = {
@@ -71,13 +57,6 @@
         flavor = "mocha";
       };
     };
-  };
-  home.pointerCursor = {
-    gtk.enable = true;
-    x11.enable = true;
-    package = pkgs.catppuccin-cursors.mochaPeach;
-    name = "catppuccin-mocha-peach-cursors";
-    size = 24;
   };
 
   # Hyprland stuff
@@ -193,16 +172,9 @@
   alacritty = {
     enable = true;
 
-    font = {
-      size = 14.0;
-      family = "ZedMono Nerd Font";
-      style = "Regular";
-    };
-
     window = {
       title = "Daliacritty";
       windowed = false;
-      opacity = 0.9;
     };
   };
   fzf.enable = true;
@@ -293,7 +265,6 @@
     speedtest-go
     tealdeer
     tokei
-    webcord
     ymuse
   ];
 }

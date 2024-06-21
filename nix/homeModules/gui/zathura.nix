@@ -7,6 +7,8 @@
   options.zathura.enable = lib.mkEnableOption "Enables and configures Zathura";
 
   config = lib.mkIf config.zathura.enable {
+    stylix.targets.zathura.enable = true;
+
     programs.zathura = {
       enable = true;
       package = pkgs.zathura;
@@ -33,7 +35,7 @@
         statusbar-h-padding = 0;
         statusbar-v-padding = 0;
         page-padding = 0;
-        font = "JetBrainsMono NF 12";
+        font = "ZedMono Nerd Font";
       };
     };
   };

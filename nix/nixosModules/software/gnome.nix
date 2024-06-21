@@ -21,10 +21,6 @@
       gnome-extension-manager
     ];
 
-    qt = {
-      enable = true;
-      platformTheme = "gnome";
-      style = "adwaita-dark";
-    };
+    stylix.targets.gnome.enable = true;
   };
 }

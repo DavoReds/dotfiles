@@ -11,12 +11,13 @@ in {
   };
 
   config = mkIf cfg.enable {
+    stylix.targets.swaylock = {
+      enable = true;
+      useImage = true;
+    };
+
     programs.swaylock = {
       enable = true;
-      catppuccin = {
-        enable = true;
-        flavor = "mocha";
-      };
 
       settings = {
         font = "ZedMono Nerd Font";

@@ -39,5 +39,7 @@
     ./gui/tofi.nix
     ./gui/waybar.nix
     ./gui/zathura.nix
+
+    ../stylix/default-stylix.nix
   ];
 }

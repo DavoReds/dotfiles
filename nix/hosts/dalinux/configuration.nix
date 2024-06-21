@@ -108,35 +108,6 @@
   # Thunar
   thunar.enable = true;
 
-  # Fonts
-  fonts = {
-    enableDefaultPackages = true;
-    fontDir.enable = true;
-    fontconfig = {
-      enable = true;
-      defaultFonts = {
-        monospace = ["Iosevka Comfy"];
-        sansSerif = ["Lato"];
-        serif = ["Noto Serif"];
-      };
-    };
-    packages = with pkgs; [
-      # Regular fonts
-      iosevka-comfy.comfy
-      lato
-      noto-fonts
-
-      # Nerd fonts
-      (nerdfonts.override {
-        fonts = [
-          "IosevkaTerm"
-          "JetBrainsMono"
-          "ZedMono"
-        ];
-      })
-    ];
-  };
-
   # Zsh integration
   programs.zsh.enable = true;
 
@@ -152,6 +123,40 @@
 
   # Podman
   podman.enable = true;
+
+  # Stylix
+  defaultStylix.enable = true;
+  stylix = {
+    homeManagerIntegration = {
+      autoImport = false;
+      followSystem = false;
+    };
+
+    targets = {
+      gtk.enable = true;
+      nixos-icons.enable = true;
+    };
+  };
+
+  # Fonts
+  fonts = {
+    enableDefaultPackages = true;
+    fontDir.enable = true;
+    fontconfig.enable = true;
+
+    packages = with pkgs; [
+      lato
+      noto-fonts
+
+      (nerdfonts.override {
+        fonts = [
+          "IosevkaTerm"
+          "JetBrainsMono"
+          "ZedMono"
+        ];
+      })
+    ];
+  };
 
   system.stateVersion = "24.11";
 }

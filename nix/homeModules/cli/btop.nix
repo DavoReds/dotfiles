@@ -11,9 +11,10 @@ in {
   };
 
   config = mkIf cfg.enable {
+    stylix.targets.btop.enable = true;
+
     programs.btop = {
       enable = true;
-      catppuccin.enable = true;
 
       settings = {
         vim_keys = true;
