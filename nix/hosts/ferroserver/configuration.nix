@@ -124,7 +124,7 @@
   programs.nh = {
     enable = true;
     clean.enable = true;
-    flake = "/shares/public/dotfiles/nix";
+    flake = "/home/samuel/dotfiles/nix";
   };
 
   # Fonts
