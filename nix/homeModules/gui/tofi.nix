@@ -27,7 +27,7 @@ in {
         border-width = 4;
         border-color = "#fab387";
         outline-width = 0;
-        result-spacing = 8;
+        result-spacing = 4;
         num-results = 8;
 
         auto-accept-single = false;
