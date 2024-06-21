@@ -118,6 +118,7 @@
   environment.systemPackages = with pkgs; [
     firefox
     vim
+    git-crypt
   ];
 
   # NH
