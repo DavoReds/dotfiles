@@ -32,6 +32,10 @@
 
       delta = {
         enable = true;
+        catppuccin = {
+          enable = true;
+          flavor = "mocha";
+        };
         package = pkgs.delta;
         options = {
           navigate = true;
