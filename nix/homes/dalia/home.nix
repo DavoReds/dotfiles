@@ -238,6 +238,7 @@
   # General GUI applications
   mpv.enable = true;
   programs.kodi.enable = true;
+  wezterm.enable = true;
   zathura.enable = true;
 
   # Extra stuff
