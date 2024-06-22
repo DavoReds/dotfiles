@@ -20,9 +20,13 @@ in {
 
       settings = {
         scrollback_lines = 100;
+
         mouse_hide_wait = -1;
+        cursor_blink_interval = 0;
+
         enable_audio_bell = false;
         window_alert_on_bell = false;
+
         text_composition_strategy = "legacy";
       };
     };
