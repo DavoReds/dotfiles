@@ -24,6 +24,7 @@
     ./cli/tasker.nix
     ./cli/tmux.nix
     ./cli/topgrade.nix
+    ./cli/yazi.nix
     ./cli/zoxide.nix
     ./cli/zsh.nix
 

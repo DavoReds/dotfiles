@@ -217,7 +217,6 @@
   eza.enable = true;
   programs.fastfetch.enable = true;
   programs.fd.enable = true;
-  lf.enable = true;
   mpd.enable = true;
   ncmpcpp.enable = true;
   ncspot.enable = true;
@@ -226,6 +225,7 @@
     wayland = true;
   };
   restic.enable = true;
+  yazi.enable = true;
 
   # General GUI applications
   kitty.enable = true;
