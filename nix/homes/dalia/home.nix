@@ -236,9 +236,9 @@
   restic.enable = true;
 
   # General GUI applications
+  kitty.enable = true;
   mpv.enable = true;
   programs.kodi.enable = true;
-  wezterm.enable = true;
   zathura.enable = true;
 
   # Extra stuff

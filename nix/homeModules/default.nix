@@ -31,6 +31,7 @@
     ./gui/amberol.nix
     ./gui/gnome-extensions.nix
     ./gui/hyprland.nix
+    ./gui/kitty.nix
     ./gui/mako.nix
     ./gui/mpv.nix
     ./gui/remmina.nix
