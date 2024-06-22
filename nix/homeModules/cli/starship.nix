@@ -41,7 +41,7 @@
           format = "[$path]($style)[$read_only]($read_only_style)";
           style = "bold blue";
           read_only = "";
-          truncation_symbol = "… /";
+          truncation_symbol = "/";
         };
 
         git_branch = {
