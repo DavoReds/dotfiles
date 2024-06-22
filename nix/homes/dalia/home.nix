@@ -169,14 +169,6 @@
   };
 
   # Development tools
-  alacritty = {
-    enable = true;
-
-    window = {
-      title = "Daliacritty";
-      windowed = false;
-    };
-  };
   fzf.enable = true;
   git = {
     enable = true;

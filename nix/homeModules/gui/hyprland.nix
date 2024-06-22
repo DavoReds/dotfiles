@@ -158,8 +158,8 @@ in {
 
         bind = [
           # Program shortcuts
-          "$mod, F, exec, ${pkgs.firefox}/bin/firefox"
-          "$mod, A, exec, ${pkgs.alacritty}/bin/alacritty"
+          "$mod, F, exec, firefox"
+          "$mod, A, exec, kitty"
           "$mod, E, exec, thunar"
 
           # Launcher
