@@ -9,6 +9,7 @@ return {
       c = { "clang-format" },
       css = { "dprint" },
       dockerfile = { "dprint" },
+      html = { "dprint" },
       javascript = { "dprint" },
       json = { "dprint" },
       jsx = { "dprint" },
