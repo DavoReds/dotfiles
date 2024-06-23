@@ -8,8 +8,11 @@ pkgs.writeShellApplication {
   ];
 
   text = ''
-      echo -e "Suspender\nApagar\nReiniciar\nLogout" | tofi --prompt-text "Acción: " | while read -r selection; do
+      echo -e "Bloquear\nSuspender\nApagar\nReiniciar\nLogout" | tofi --prompt-text "Acción: " | while read -r selection; do
       case $selection in
+        Bloquear)
+          swaylock
+          ;;
         Suspender)
           systemctl suspend && swaylock
           ;;

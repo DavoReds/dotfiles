@@ -121,6 +121,8 @@
     settings = {
       general = {
         ignore_dbus_inhibit = false;
+        lock_cmd = "swaylock";
+        before_sleep_cmd = "swaylock";
       };
 
       listener = [
@@ -131,12 +133,12 @@
         }
         {
           timeout = 300;
-          on-timeout = "pidof swaylock || swaylock";
+          on-timeout = "hyprctl dispatch dpms off";
+          on-resume = "hyprctl dispatch dpms on";
         }
         {
           timeout = 330;
-          on-timeout = "hyprctl dispatch dpms off";
-          on-resume = "hyprctl dispatch dpms on";
+          on-timeout = "pidof swaylock || swaylock";
         }
         {
           timeout = 600;
