@@ -242,6 +242,9 @@ in {
           # Brightness
           ", XF86MonBrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl s 5%-"
           ", XF86MonBrightnessUp, exec, ${pkgs.brightnessctl}/bin/brightnessctl s 5%+"
+
+          # Close laptop lid
+          ", switch:Lid Switch, exec, systemctl suspend && swaylock"
         ];
 
         # Window rules
