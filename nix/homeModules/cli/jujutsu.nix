@@ -41,6 +41,7 @@ in {
           editor = "nvim";
           pager = mkIf cfg.delta "${pkgs.delta}/bin/delta";
           diff.format = mkIf cfg.delta "git";
+          diff-editor = ":builtin";
         };
         colors = {
           change_id = {
