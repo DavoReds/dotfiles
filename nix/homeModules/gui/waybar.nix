@@ -152,7 +152,7 @@ in {
         * {
           border: none;
           border-radius: 10px;
-          font-family: Iosevka Comfy;
+          font-family: Iosevka Nerd Font;
           font-size: 15px;
           min-height: 10px;
         }
