@@ -20,7 +20,8 @@ in {
           ratio = [1 3 4];
         };
         preview = {
-          image_filter = "nearest";
+          image_filter = "lanczos3";
+          image_quality = 70;
         };
       };
     };
