@@ -21,21 +21,25 @@
       };
 
       fonts = {
-        monospace = {
-          package = pkgs.nerdfonts.override {
-            fonts = [
-              "ZedMono"
-            ];
-          };
-          name = "ZedMono Nerd Font";
-        };
         emoji = {
           package = pkgs.noto-fonts-emoji;
           name = "Noto Color Emoji";
         };
 
-        serif = config.stylix.fonts.monospace;
-        sansSerif = config.stylix.fonts.monospace;
+        monospace = {
+          package = pkgs.iosevka;
+          name = "Iosevka";
+        };
+
+        sansSerif = {
+          package = pkgs.iosevka-comfy.comfy;
+          name = "Iosevka Comfy";
+        };
+
+        serif = {
+          package = pkgs.iosevka-comfy.comfy;
+          name = "Iosevka Comfy";
+        };
 
         sizes.terminal = 14;
       };

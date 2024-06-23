@@ -20,7 +20,7 @@ in {
       enable = true;
 
       settings = {
-        font = "ZedMono Nerd Font";
+        font = "Iosevka Comfy";
         font-size = 14;
       };
     };

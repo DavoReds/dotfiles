@@ -17,7 +17,7 @@ in {
       };
 
       settings = {
-        font = "ZedMono Nerd Font";
+        font = "Iosevka Comfy";
         font-size = 14;
         hint-font = false;
 

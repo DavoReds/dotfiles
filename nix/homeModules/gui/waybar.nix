@@ -65,7 +65,7 @@ in {
             timezone = "America/Bogota";
             locale = "es_CO.UTF-8";
             tooltip = true;
-            tooltip-format = "<span size='11pt' font='ZedMono Nerd Font'>{calendar}</span>";
+            tooltip-format = "<span size='11pt' font='Iosevka Comfy'>{calendar}</span>";
 
             calendar = {
               mode = "month";
@@ -89,8 +89,8 @@ in {
 
           network = {
             format-ethernet = "󰈀";
-            format-wifi = " ";
-            format-disconnected = "󰖪 ";
+            format-wifi = "";
+            format-disconnected = "󰖪";
             tooltip = false;
           };
 
@@ -152,7 +152,7 @@ in {
         * {
           border: none;
           border-radius: 10px;
-          font-family: Zed Mono Nerd Font;
+          font-family: Iosevka Comfy;
           font-size: 15px;
           min-height: 10px;
         }

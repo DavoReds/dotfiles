@@ -141,7 +141,6 @@
   # Fonts
   fonts = {
     enableDefaultPackages = true;
-    fontDir.enable = true;
     fontconfig.enable = true;
 
     packages = with pkgs; [

@@ -35,7 +35,7 @@
         statusbar-h-padding = 0;
         statusbar-v-padding = 0;
         page-padding = 0;
-        font = "ZedMono Nerd Font";
+        font = "Iosevka Comfy";
       };
     };
   };
