@@ -37,6 +37,15 @@ return {
       ["clang-format"] = {
         prepend_args = { "--style=Chromium" },
       },
+      djlint = {
+        prepend_args = {
+          "--indent",
+          "2",
+          "--preserve-blank-lines",
+          "--max-line-length",
+          "80",
+        },
+      },
       stylua = {
         prepend_args = { "--indent-type", "Spaces" },
       },
