@@ -27,7 +27,7 @@ in {
         enable_audio_bell = false;
         window_alert_on_bell = false;
 
-        text_composition_strategy = "legacy";
+        text_composition_strategy = "platform";
       };
     };
   };
