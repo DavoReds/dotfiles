@@ -146,14 +146,6 @@
     packages = with pkgs; [
       lato
       noto-fonts
-
-      (nerdfonts.override {
-        fonts = [
-          "IosevkaTerm"
-          "JetBrainsMono"
-          "ZedMono"
-        ];
-      })
     ];
   };
 
