@@ -22,7 +22,7 @@ return {
       sh = { "shfmt" },
       sql = { "dprint" },
       templ = { "templ" },
-      toml = { "taplo" },
+      toml = { "dprint" },
       tsx = { "dprint" },
       typescript = { "dprint" },
       typst = { "typstfmt" },
