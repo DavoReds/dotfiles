@@ -10,7 +10,7 @@ return {
       css = { "dprint" },
       dockerfile = { "dprint" },
       html = { "dprint" },
-      htmldjango = { "dprint" },
+      htmldjango = { "djlint" },
       javascript = { "dprint" },
       json = { "dprint" },
       jsx = { "dprint" },
