@@ -27,6 +27,7 @@
     ./software/thunar.nix
     ./software/xfce.nix
 
+    ./services/jellyfin.nix
     ./services/nextdns.nix
     ./services/openssh.nix
     ./services/rdp.nix
