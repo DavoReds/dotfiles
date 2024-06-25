@@ -62,8 +62,9 @@
   docker = {
     enable = true;
     nvidia = true;
-    users = ["jofero" "samuel"];
   };
+
+  users.extraGroups.docker.members = ["jofero" "samuel"];
 
   # RDP
   rdp = {
@@ -116,9 +117,10 @@
 
   # Other packages
   environment.systemPackages = with pkgs; [
+    docker-compose
     firefox
-    vim
     git-crypt
+    vim
   ];
 
   # NH
@@ -211,32 +213,6 @@
   services.samba-wsdd = {
     enable = true;
     openFirewall = true;
-  };
-
-  # Emby
-  virtualisation.oci-containers = {
-    backend = "docker";
-
-    containers.emby = {
-      autoStart = true;
-      image = "lscr.io/linuxserver/emby:latest";
-      environment = {
-        PUID = "1001";
-        PGID = "100";
-        TZ = "America/Bogota";
-        NVIDIA_VISIBLE_DEVICES = "all";
-        NVIDIA_DRIVER_CAPABILITIES = "compute,utility,video";
-      };
-      volumes = [
-        "/home/samuel/Apps/Emby/config:/config"
-        "/home/samuel/Apps/Emby/lib:/opt/vc/lib"
-        "/home/samuel/Vídeos:/data"
-      ];
-      ports = [
-        "8096:8096"
-        "8920:8920"
-      ];
-    };
   };
 
   system.stateVersion = "24.11";

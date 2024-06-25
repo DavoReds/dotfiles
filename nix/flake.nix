@@ -58,6 +58,7 @@
         modules = [
           ./hosts/ferroserver/configuration.nix
           ./nixosModules
+          inputs.stylix.nixosModules.stylix
         ];
       };
     };
