@@ -13,37 +13,56 @@
   };
 
   config = lib.mkIf config.helix.enable {
-    stylix.targets.helix.enable = true;
-
     programs.helix = {
       enable = true;
       defaultEditor = config.helix.defaultEditor;
 
       settings = {
+        theme = "catppuccin_mocha";
+
         editor = {
-          line-number = "relative";
-          scrolloff = 8;
-          mouse = true;
-          middle-click-paste = true;
-          gutters = ["diagnostics" "spacer" "line-numbers" "spacer" "diff"];
+          auto-completion = true;
+          auto-format = true;
           bufferline = "multiple";
           color-modes = true;
-          auto-format = true;
-          true-color = true;
-          text-width = 80;
-          rulers = [81];
-          cursorline = true;
-          insert-final-newline = false;
-          popup-border = "all";
-          indent-heuristic = "tree-sitter";
-          auto-completion = true;
-          preview-completion-insert = false;
           completion-trigger-len = 1;
+          cursorline = true;
+          gutters = ["diagnostics" "spacer" "line-numbers" "spacer" "diff"];
+          indent-heuristic = "tree-sitter";
+          insert-final-newline = false;
+          line-number = "relative";
+          middle-click-paste = true;
+          mouse = true;
+          popup-border = "all";
+          preview-completion-insert = false;
+          rulers = [81];
+          scrolloff = 8;
+          text-width = 80;
+          true-color = true;
 
           statusline = {
-            left = ["mode" "spacer" "spinner" "spacer" "version-control"];
-            center = ["file-name" "file-type" "file-modification-indicator" "read-only-indicator"];
-            right = ["diagnostics" "workspace-diagnostics" "position" "total-line-numbers" "position-percentage" "spacer" "register"];
+            left = [
+              "mode"
+              "spacer"
+              "spinner"
+              "spacer"
+              "version-control"
+            ];
+            center = [
+              "file-name"
+              "file-type"
+              "file-modification-indicator"
+              "read-only-indicator"
+            ];
+            right = [
+              "diagnostics"
+              "workspace-diagnostics"
+              "position"
+              "total-line-numbers"
+              "position-percentage"
+              "spacer"
+              "register"
+            ];
           };
 
           cursor-shape = {
@@ -53,7 +72,7 @@
           };
 
           file-picker = {
-            hidden = false;
+            hidden = true;
           };
 
           auto-pairs = true;
@@ -83,12 +102,11 @@
 
           space = {
             b.c = ":buffer-close!";
-            e = [":new" ":insert-output lf" ":buffer-close!" ":redraw"];
           };
         };
 
         keys.insert = {
-          C-e = "completion";
+          C-x = "completion";
           C-f = "move_parent_node_end";
         };
       };
