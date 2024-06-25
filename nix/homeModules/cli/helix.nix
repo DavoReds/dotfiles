@@ -127,6 +127,48 @@
       };
 
       languages = {
+        use-grammars = {
+          only = [
+            "c"
+            "css"
+            "docker-compose"
+            "dockerfile"
+            "git-attributes"
+            "git-commit"
+            "git-ignore"
+            "git-rebase"
+            "go"
+            "gomod"
+            "html"
+            "javascript"
+            "jinja"
+            "jsdoc"
+            "json"
+            "json5"
+            "jsonc"
+            "jsx"
+            "just"
+            "lua"
+            "markdown"
+            "markdown.inline"
+            "mermaid"
+            "nix"
+            "python"
+            "ron"
+            "rust"
+            "sql"
+            "templ"
+            "toml"
+            "tsx"
+            "typescript"
+            "typst"
+            "xml"
+            "yaml"
+            "zig"
+            "bash"
+          ];
+        };
+
         language-server = {
           pyright-langserver = {
             command = "pyright-langserver";
