@@ -13,6 +13,21 @@
   };
 
   config = lib.mkIf config.helix.enable {
+    # Custom theme
+    xdg.configFile."helix/themes/catppuccin_mocha.toml" = {
+      enable = true;
+      text =
+        /*
+        toml
+        */
+        ''
+          inherits = "catppuccin_mocha"
+
+          "markup.bold" = { fg = "peach", modifiers = [ "bold" ] }
+          "markup.italic" = { fg = "teal", modifiers = [ "italic" ] }
+        '';
+    };
+
     programs.helix = {
       enable = true;
       defaultEditor = config.helix.defaultEditor;
