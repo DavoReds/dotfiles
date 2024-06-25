@@ -13,13 +13,11 @@
   };
 
   config = lib.mkIf config.helix.enable {
+    stylix.targets.helix.enable = true;
+
     programs.helix = {
       enable = true;
       defaultEditor = config.helix.defaultEditor;
-      catppuccin = {
-        enable = true;
-        useItalics = true;
-      };
 
       settings = {
         editor = {
