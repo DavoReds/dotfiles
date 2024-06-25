@@ -216,6 +216,7 @@
   };
 
   # Jellyfin
+  users.group.mediagroup = {};
   jellyfin = {
     enable = true;
     group = "mediagroup";
