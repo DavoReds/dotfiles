@@ -215,12 +215,5 @@
     openFirewall = true;
   };
 
-  # Jellyfin
-  users.group.mediagroup = {};
-  jellyfin = {
-    enable = true;
-    group = "mediagroup";
-  };
-
   system.stateVersion = "24.11";
 }
