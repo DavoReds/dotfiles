@@ -24,8 +24,20 @@
   # Audio
   audio.enable = true;
 
-  # System76 modules
-  system76.enable = true;
+  # Battery
+  battery = {
+    enable = true;
+    enableIntel = false;
+    perfPolicyOnAC = "performance";
+    perfPolicyOnBat = "power";
+    startCharge = 20;
+    stopCharge = 80;
+    hibernateOnBat = true;
+    disableDevices = "wifi wwan";
+    enableDevices = "bluetooth";
+    excludeAudio = false;
+    excludeBluetooth = false;
+  };
 
   # Gaming
   ## AMD Drivers
