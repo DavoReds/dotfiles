@@ -231,10 +231,12 @@
     calibre
     discord
     du-dust
+    gimp
     git-crypt
     heroic
     imv
     kondo
+    krita
     newsflash
     nodejs
     obsidian
