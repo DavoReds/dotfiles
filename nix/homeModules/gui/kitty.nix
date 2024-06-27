@@ -16,7 +16,9 @@ in {
 
     programs.kitty = {
       enable = true;
-      shellIntegration.enableZshIntegration = true;
+      shellIntegration = {
+        enableZshIntegration = true;
+      };
 
       settings = {
         scrollback_lines = 100;
@@ -28,6 +30,8 @@ in {
         window_alert_on_bell = false;
 
         text_composition_strategy = "platform";
+
+        confirm_os_window_close = 0;
       };
     };
   };
