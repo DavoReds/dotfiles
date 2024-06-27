@@ -46,18 +46,7 @@
       name = "Papirus-Dark";
     };
   };
-  qt = {
-    enable = true;
-    style = {
-      name = "kvantum";
-      catppuccin = {
-        enable = true;
-        apply = true;
-        accent = "peach";
-        flavor = "mocha";
-      };
-    };
-  };
+  qtConfig.enable = true;
 
   # Hyprland stuff
   hyprland = {

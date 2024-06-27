@@ -35,6 +35,7 @@
     ./gui/kitty.nix
     ./gui/mako.nix
     ./gui/mpv.nix
+    ./gui/qt-config.nix
     ./gui/remmina.nix
     ./gui/swappy.nix
     ./gui/swaylock.nix
