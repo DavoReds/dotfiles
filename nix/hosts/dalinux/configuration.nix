@@ -40,9 +40,6 @@
   };
 
   # Gaming
-  ## AMD Drivers
-  services.xserver.videoDrivers = ["amdgpu"];
-
   gaming = {
     enable = true;
     user = "dalia";
@@ -58,6 +55,11 @@
 
   # Hostname
   networking.hostName = "dalinux";
+
+  # Hosts
+  networking.hosts = {
+    "192.168.1.18" = ["ferroserver.local"];
+  };
 
   # Firewall
   networking.firewall.enable = true;
