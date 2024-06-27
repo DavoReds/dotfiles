@@ -4,13 +4,14 @@ return {
   priority = 1000,
   config = function()
     require("catppuccin").setup({
+      default_integrations = false,
       flavour = "mocha",
       term_colors = true,
+      transparent_background = true,
       integrations = {
         barbar = true,
         fidget = true,
         gitsigns = true,
-        harpoon = true,
         hop = true,
         indent_blankline = {
           enabled = true,
