@@ -7,7 +7,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Kernel
-  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   # Bootloader
   systemd-boot.enable = true;
