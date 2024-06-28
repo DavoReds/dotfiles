@@ -231,7 +231,6 @@
     calibre
     discord
     du-dust
-    gimp
     git-crypt
     heroic
     imv
