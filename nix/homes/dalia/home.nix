@@ -235,7 +235,6 @@
     git-crypt
     heroic
     imv
-    kdePackages.kdenlive
     kondo
     krita
     newsflash

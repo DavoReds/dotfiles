@@ -112,6 +112,9 @@
     vim
   ];
 
+  # Flatpak
+  services.flatpak.enable = true;
+
   # NH
   programs.nh = {
     enable = true;
