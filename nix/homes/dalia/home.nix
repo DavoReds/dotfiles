@@ -138,6 +138,7 @@
   };
 
   # Allow home-manager to configure XDG directories
+  home.preferXdgDirectories = true;
   xdg = {
     enable = true;
     userDirs = {
@@ -234,6 +235,7 @@
     git-crypt
     heroic
     imv
+    kdePackages.kdenlive
     kondo
     krita
     newsflash
