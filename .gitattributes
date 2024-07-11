@@ -1,0 +1,1 @@
+nix/nixosModules/secrets/** filter=git-crypt diff=git-crypt
