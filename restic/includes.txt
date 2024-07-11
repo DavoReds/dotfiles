@@ -1,0 +1,6 @@
+/home/dalia/Código
+/home/dalia/Documentos
+/home/dalia/Imágenes
+
+/home/dalia/.local/share/tasker
+/home/dalia/.mpd
