@@ -10,7 +10,7 @@
     };
 
     nbfc-linux = {
-      url = "github:nbfc-linux/nbfc-linux";
+      url = "github:nbfc-linux/nbfc-linux/530f0d08017be02569d31a642c2b0269af71b226";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
