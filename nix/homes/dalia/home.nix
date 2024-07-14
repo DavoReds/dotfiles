@@ -202,7 +202,6 @@
     git-crypt
     heroic
     jq
-    kodi-wayland
     kondo
     nodejs
     obsidian
