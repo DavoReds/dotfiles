@@ -193,7 +193,6 @@
   # General GUI applications
   imv.enable = true;
   mpv.enable = true;
-  programs.kodi.enable = true;
   zathura.enable = true;
 
   # Extra stuff
@@ -206,6 +205,7 @@
     git-crypt
     heroic
     jq
+    kodi-wayland
     kondo
     nodejs
     obsidian
