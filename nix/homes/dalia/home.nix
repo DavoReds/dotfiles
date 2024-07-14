@@ -183,10 +183,7 @@
   mpd.enable = true;
   ncmpcpp.enable = true;
   ncspot.enable = true;
-  pass = {
-    enable = true;
-    wayland = true;
-  };
+  pass.enable = true;
   restic.enable = true;
   yazi.enable = true;
 
