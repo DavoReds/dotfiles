@@ -176,8 +176,8 @@
             args = ["--stdio"];
           };
 
-          emmet-ls = {
-            command = "emmet-ls";
+          emmet-lsp = {
+            command = "emmet-language-server";
             args = ["--stdio"];
           };
 
@@ -321,10 +321,7 @@
               unit = "  ";
             };
             language-servers = [
-              {
-                name = "emmet-ls";
-                only-features = ["completion"];
-              }
+              "emmet-lsp"
               "vscode-html-language-server"
               "htmx"
             ];
