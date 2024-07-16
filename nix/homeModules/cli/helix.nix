@@ -325,6 +325,10 @@
               "vscode-html-language-server"
               "htmx"
             ];
+            formatter = {
+              command = "dprint";
+              args = ["fmt" "--stdin" "html"];
+            };
             auto-format = true;
             auto-pairs = {
               "<" = ">";
@@ -344,10 +348,7 @@
               unit = "  ";
             };
             language-servers = [
-              {
-                name = "emmet-ls";
-                only-features = ["completion"];
-              }
+              "emmet-lsp"
               "vscode-css-language-server"
             ];
             formatter = {
@@ -481,10 +482,7 @@
             name = "templ";
             language-servers = [
               "templ"
-              {
-                name = "emmet-ls";
-                only-features = ["completion"];
-              }
+              "emmet-lsp"
               "vscode-html-language-server"
               "htmx"
             ];
@@ -498,18 +496,24 @@
           {
             name = "jinja";
             language-servers = [
-              {
-                name = "emmet-ls";
-                only-features = ["completion"];
-              }
+              "emmet-lsp"
               "vscode-html-language-server"
               "htmx"
             ];
             formatter = {
-              command = "djlint";
-              args = ["-" "--reformat" "--indent" "2"];
+              command = "dprint";
+              args = ["fmt" "--stdin" "jinja"];
             };
             auto-format = true;
+            auto-pairs = {
+              "<" = ">";
+              "(" = ")";
+              "{" = "}";
+              "[" = "]";
+              "\"" = "\"";
+              "'" = "'";
+              "`" = "`";
+            };
           }
 
           {
