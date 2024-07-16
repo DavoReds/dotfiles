@@ -3,4 +3,3 @@
 /home/dalia/Imágenes
 
 /home/dalia/.local/share/tasker
-/home/dalia/.mpd
