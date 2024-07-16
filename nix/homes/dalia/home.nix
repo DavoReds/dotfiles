@@ -156,7 +156,6 @@
   tasker.enable = true;
   tmux.enable = true;
   topgrade.enable = true;
-  zellij.enable = true;
   zoxide.enable = true;
   zsh = {
     enable = true;
@@ -180,8 +179,6 @@
   eza.enable = true;
   programs.fastfetch.enable = true;
   programs.fd.enable = true;
-  mpd.enable = true;
-  ncmpcpp.enable = true;
   ncspot.enable = true;
   pass.enable = true;
   restic.enable = true;
@@ -216,6 +213,5 @@
     speedtest-go
     tealdeer
     tokei
-    ymuse
   ];
 }
