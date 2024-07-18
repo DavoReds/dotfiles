@@ -186,12 +186,17 @@
 
   # General GUI applications
   imv.enable = true;
+  kodi = {
+    enable = true;
+    wayland = true;
+  };
   mpv.enable = true;
   zathura.enable = true;
 
   # Extra stuff
   home.packages = with pkgs; [
     age
+    amberol
     bleachbit
     calibre
     discord

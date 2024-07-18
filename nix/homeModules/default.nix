@@ -34,6 +34,7 @@
     ./gui/hyprland.nix
     ./gui/imv.nix
     ./gui/kitty.nix
+    ./gui/kodi.nix
     ./gui/mako.nix
     ./gui/mpv.nix
     ./gui/qt-config.nix
