@@ -165,6 +165,7 @@
     fontconfig.enable = true;
 
     packages = with pkgs; [
+      inter
       lato
       noto-fonts
       poppins
