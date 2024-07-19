@@ -167,6 +167,7 @@
     packages = with pkgs; [
       lato
       noto-fonts
+      poppins
     ];
   };
 
