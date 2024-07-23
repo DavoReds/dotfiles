@@ -214,5 +214,6 @@
     ripgrep
     speedtest-go
     tealdeer
+    thunderbird-128
   ];
 }
