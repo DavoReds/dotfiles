@@ -195,17 +195,14 @@
 
   # Extra stuff
   home.packages = with pkgs; [
-    age
     amberol
     bleachbit
-    calibre
     discord
     du-dust
     git-crypt
     heroic
     jq
     kondo
-    nodejs
     obsidian
     onlyoffice-bin_latest
     ouch
@@ -217,6 +214,5 @@
     ripgrep
     speedtest-go
     tealdeer
-    tokei
   ];
 }

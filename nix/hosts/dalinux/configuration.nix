@@ -123,7 +123,6 @@
   # NH
   programs.nh = {
     enable = true;
-    clean.enable = true;
     flake = "/home/dalia/dotfiles";
   };
 
@@ -166,7 +165,6 @@
 
     packages = with pkgs; [
       inter
-      lato
       noto-fonts
       poppins
     ];
