@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: {
   options.mpv.enable = lib.mkEnableOption "Configures MPV";
@@ -13,8 +14,9 @@
       config = {
         cursor-autohide-fs-only = true;
         cursor-autohide = 1000;
-        force-seekable = "yes";
         volume = 70;
+        osd-bar = "no";
+        border = "no";
       };
 
       profiles = {
@@ -33,6 +35,11 @@
       };
 
       defaultProfiles = ["1080p"];
+
+      scripts = with pkgs.mpvScripts; [
+        uosc
+        thumbfast
+      ];
     };
   };
 }
