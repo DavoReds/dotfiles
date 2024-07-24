@@ -38,7 +38,6 @@ in {
         ui = {
           color = "always";
           default-command = ["log" "-r" "all()"];
-          editor = "nvim";
           diff-editor = ":builtin";
 
           # Delta
