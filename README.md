@@ -12,7 +12,6 @@ These are all the programs that are not defined in a nix file and therefore can 
 4. SQLite
 5. Swappy
 6. [Tasker-cli](https://github.com/DavoReds/tasker)
-7. Tmux
 
 ## Home-Manager
 
@@ -43,12 +42,13 @@ These are all the programs that are configured using home-manager modules, and t
 23. Remmina
 24. Swaylock
 25. Starship
-26. Tofi
-27. Topgrade
-28. Waybar
-29. Zathura
-30. Zoxide
-31. Zsh
+26. Tmux
+27. Tofi
+28. Topgrade
+29. Waybar
+30. Zathura
+31. Zoxide
+32. Zsh
 
 \* These programs are configured in my `home.nix` configuration file instead of their own module because having so many programs to make Hyprland usable annoys me and I didn't have the energy to modularize them.
 
