@@ -43,7 +43,6 @@
     ./gui/swaylock.nix
     ./gui/tofi.nix
     ./gui/waybar.nix
-    ./gui/wezterm.nix
     ./gui/zathura.nix
 
     ../stylix/default-stylix.nix
