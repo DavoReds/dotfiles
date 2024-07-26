@@ -133,7 +133,7 @@
   programs.nh = {
     enable = true;
     clean.enable = true;
-    flake = "/home/samuel/dotfiles/nix";
+    flake = "/home/samuel/dotfiles";
   };
 
   # Docker
