@@ -33,8 +33,8 @@
     startCharge = 20;
     stopCharge = 80;
     hibernateOnBat = false;
-    disableDevices = "wifi wwan";
-    enableDevices = "bluetooth";
+    disableDevices = "wwan";
+    enableDevices = "bluetooth wifi";
     excludeAudio = false;
     excludeBluetooth = false;
   };
@@ -51,7 +51,11 @@
   nbfc.enable = true;
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking = {
+    networkmanager.enable = true;
+    useDHCP = false;
+  };
+  systemd.services.NetworkManager-wait-online.enable = false;
 
   # Hostname
   networking.hostName = "dalinux";
