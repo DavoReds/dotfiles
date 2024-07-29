@@ -195,7 +195,6 @@
 
   # Extra stuff
   home.packages = with pkgs; [
-    amberol
     bleachbit
     discord
     du-dust
