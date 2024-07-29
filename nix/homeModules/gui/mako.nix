@@ -11,10 +11,12 @@ in {
   };
 
   config = mkIf cfg.enable {
-    stylix.targets.mako.enable = true;
-
     services.mako = {
       enable = true;
+      catppuccin = {
+        enable = true;
+        flavor = "mocha";
+      };
 
       borderRadius = 4;
       borderSize = 4;

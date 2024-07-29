@@ -33,9 +33,7 @@
 
   # Theming
   defaultStylix.enable = true;
-  stylix.targets = {
-    gtk.enable = true;
-  };
+  stylix.targets.gtk.enable = true;
   gtk = {
     enable = true;
     catppuccin.icon = {

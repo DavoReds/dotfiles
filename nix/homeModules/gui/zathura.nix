@@ -1,17 +1,17 @@
 {
   lib,
   config,
-  pkgs,
   ...
 }: {
   options.zathura.enable = lib.mkEnableOption "Enables and configures Zathura";
 
   config = lib.mkIf config.zathura.enable {
-    stylix.targets.zathura.enable = true;
-
     programs.zathura = {
       enable = true;
-      package = pkgs.zathura;
+      catppuccin = {
+        enable = true;
+        flavor = "mocha";
+      };
 
       mappings = {
         u = "scroll half-up";

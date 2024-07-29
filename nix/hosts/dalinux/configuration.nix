@@ -147,10 +147,6 @@
       autoImport = false;
       followSystem = false;
     };
-
-    targets = {
-      gtk.enable = true;
-    };
   };
 
   # Fonts
