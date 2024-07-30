@@ -8,7 +8,7 @@
 in {
   options.battery = {
     enable = mkEnableOption "Enables battery optimizations";
-    enableIntel = mkOption {
+    intel = mkOption {
       type = types.bool;
       description = "Enables thermald for intel processors";
       default = false;
@@ -129,6 +129,6 @@ in {
     };
 
     # Enable thermald on intel
-    services.thermald.enable = cfg.enableIntel;
+    services.thermald.enable = cfg.intel;
   };
 }

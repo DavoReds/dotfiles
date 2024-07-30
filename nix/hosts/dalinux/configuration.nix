@@ -27,15 +27,14 @@
   # Battery Optimizations
   battery = {
     enable = true;
-    enableIntel = false;
     perfPolicyOnAC = "performance";
-    perfPolicyOnBat = "balance-power";
+    perfPolicyOnBat = "power";
     startCharge = 20;
     stopCharge = 80;
     hibernateOnBat = false;
-    disableDevices = "wwan";
-    enableDevices = "bluetooth wifi";
-    excludeAudio = false;
+    disableDevices = "wifi wwan";
+    enableDevices = "bluetooth";
+    excludeAudio = true;
     excludeBluetooth = false;
   };
 
