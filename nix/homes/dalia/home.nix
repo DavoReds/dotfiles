@@ -194,6 +194,7 @@
   # Extra stuff
   home.packages = with pkgs; [
     bleachbit
+    calibre
     discord
     du-dust
     git-crypt
