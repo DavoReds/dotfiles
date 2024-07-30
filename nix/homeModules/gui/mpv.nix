@@ -35,11 +35,6 @@
       };
 
       defaultProfiles = ["1080p"];
-
-      scripts = with pkgs.mpvScripts; [
-        uosc
-        thumbfast
-      ];
     };
   };
 }
