@@ -95,11 +95,11 @@ in {
           else "s2idle";
 
         # Processor
-        CPU_DRIVER_OPMODE_ON_AC = "passive";
-        CPU_DRIVER_OPMODE_ON_BAT = "passive";
+        CPU_DRIVER_OPMODE_ON_AC = "active";
+        CPU_DRIVER_OPMODE_ON_BAT = "active";
 
-        CPU_SCALING_GOVERNOR_ON_AC = "schedutil";
-        CPU_SCALING_GOVERNOR_ON_BAT = "schedutil";
+        CPU_SCALING_GOVERNOR_ON_AC = "performance";
+        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
 
         CPU_ENERGY_PERF_POLICY_ON_AC = cfg.perfPolicyOnAC;
         CPU_ENERGY_PERF_POLICY_ON_BAT = cfg.perfPolicyOnBat;
