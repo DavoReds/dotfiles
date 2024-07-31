@@ -27,15 +27,16 @@
   # Battery Optimizations
   battery = {
     enable = true;
-    perfPolicyOnAC = "performance";
-    perfPolicyOnBat = "power";
-    startCharge = 20;
-    stopCharge = 80;
-    hibernateOnBat = false;
-    disableDevices = "wifi wwan";
-    enableDevices = "bluetooth";
-    excludeAudio = true;
-    excludeBluetooth = false;
+    charger = {
+      governor = "performance";
+      epp = "performance";
+      turbo = "auto";
+    };
+    battery = {
+      governor = "powersave";
+      epp = "power";
+      turbo = "auto";
+    };
   };
 
   # Gaming
