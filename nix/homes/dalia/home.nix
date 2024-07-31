@@ -122,7 +122,38 @@
     mimeApps = {
       enable = true;
       defaultApplications = {
-        "application/pdf" = ["zathura.desktop"];
+        # Documents
+        "application/pdf" = "org.pwmt.zathura.desktop";
+        "application/msword" = "onlyoffice-desktopeditors.desktop";
+
+        # Browser stuff
+        "text/html" = "firefox.desktop";
+        "x-scheme-handler/about" = "firefox.desktop";
+        "x-scheme-handler/http" = "firefox.desktop";
+        "x-scheme-handler/https" = "firefox.desktop";
+        "x-scheme-handler/unknown" = "firefox.desktop";
+
+        # Images
+        "image/gif" = "imv.desktop";
+        "image/jpeg" = "imv.desktop";
+        "image/png" = "imv.desktop";
+        "image/svg+xml" = "imv.desktop";
+        "image/webp" = "imv.desktop";
+
+        # Video
+        "video/avi" = "vlc.desktop";
+        "video/mp4" = "vlc.desktop";
+        "video/mpeg" = "vlc.desktop";
+        "video/ogg" = "vlc.desktop";
+        "video/quicktime" = "vlc.desktop";
+        "video/webm" = "vlc.desktop";
+        "video/x-matroska" = "vlc.desktop";
+        "video/x-motion-jpeg" = "vlc.desktop";
+
+        # Audio
+        "audio/mpeg" = "mpv.desktop";
+        "audio/mpeg3" = "mpv.desktop";
+        "audio/ogg" = "mpv.desktop";
       };
     };
   };
