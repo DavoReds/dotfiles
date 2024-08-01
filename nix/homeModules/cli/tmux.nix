@@ -15,7 +15,7 @@ in {
       baseIndex = 1;
       disableConfirmationPrompt = true;
       escapeTime = 0;
-      historyLimit = 100;
+      historyLimit = 1000;
       keyMode = "vi";
       mouse = true;
       prefix = "C-Space";
