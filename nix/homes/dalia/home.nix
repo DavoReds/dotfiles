@@ -81,13 +81,13 @@
       splash = false;
 
       preload = [
-        "/home/dalia/Imágenes/Fondos/feet-on-the-dashboard.png"
-        "/home/dalia/Imágenes/Fondos/evening-sky.png"
+        "/home/dalia/Imágenes/Fondos/earth.png"
+        "/home/dalia/Imágenes/Fondos/dice.png"
       ];
 
       wallpaper = [
-        "eDP-1,/home/dalia/Imágenes/Fondos/feet-on-the-dashboard.png"
-        "HDMI-A-1,/home/dalia/Imágenes/Fondos/evening-sky.png"
+        "eDP-1,/home/dalia/Imágenes/Fondos/earth.png"
+        "HDMI-A-1,/home/dalia/Imágenes/Fondos/dice.png"
       ];
     };
   };
