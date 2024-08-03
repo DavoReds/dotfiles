@@ -151,7 +151,7 @@ in {
             border: none;
             border-radius: 10px;
             font-family: Iosevka Nerd Font;
-            font-size: 16px;
+            font-size: 15px;
             min-height: 10px;
           }
 
@@ -186,7 +186,6 @@ in {
               transition: none;
               color: @text;
               background: transparent;
-              font-size: 16px;
               font-weight: bold;
               border-radius: 12px;
           }
@@ -203,7 +202,6 @@ in {
               transition: none;
               color: @crust;
               background: @peach;
-              font-size: 4px;
           }
 
           #workspaces button.active:hover {
