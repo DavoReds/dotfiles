@@ -65,7 +65,7 @@ in {
             timezone = "America/Bogota";
             locale = "es_CO.UTF-8";
             tooltip = true;
-            tooltip-format = "<span size='11pt' font='Iosevka Comfy'>{calendar}</span>";
+            tooltip-format = "<span size='12px' font='Iosevka Nerd Font'>{calendar}</span>";
 
             calendar = {
               mode = "month";
@@ -148,178 +148,181 @@ in {
         };
       };
 
-      style = ''
-        * {
-          border: none;
-          border-radius: 10px;
-          font-family: Iosevka Nerd Font;
-          font-size: 15px;
-          min-height: 10px;
-        }
-
-        window#waybar {
-            background: transparent;
-        }
-
-        window#waybar.hidden {
-            opacity: 0.2;
-        }
-
-        #window {
-            margin-top: 6px;
-            padding-left: 10px;
-            padding-right: 10px;
+      style =
+        /*
+        css
+        */
+        ''
+          * {
+            border: none;
             border-radius: 10px;
-            transition: none;
-            color: transparent;
-            background: transparent;
-        }
-
-        #workspaces {
-            margin-top: 6px;
-            margin-left: 12px;
-            font-size: 4px;
-            margin-bottom: 0px;
-            border-radius: 10px;
-            background: @mantle;
-            transition: none;
-        }
-
-        #workspaces button {
-            transition: none;
-            color: @text;
-            background: transparent;
+            font-family: Iosevka Nerd Font;
             font-size: 16px;
-            font-weight: bold;
-            border-radius: 2px;
-        }
+            min-height: 10px;
+          }
 
-        #workspaces button:hover {
-            transition: none;
-            box-shadow: inherit;
-            text-shadow: inherit;
-            border-color: @maroon;
-            color: @maroon;
-        }
+          window#waybar {
+              background: transparent;
+          }
 
-        #workspaces button.active {
-            transition: none;
-            color: @peach;
-            background: transparent;
-            font-size: 4px;
-        }
+          window#waybar.hidden {
+              opacity: 0.2;
+          }
 
-        #workspaces button.active:hover {
-            color: @flamingo;
-        }
+          #window {
+              margin-top: 6px;
+              padding-left: 10px;
+              padding-right: 10px;
+              border-radius: 10px;
+              transition: none;
+              color: transparent;
+              background: transparent;
+          }
 
-        #network {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            padding-right: 15px;
-            margin-bottom: 0px;
-            border-radius: 10px;
-            transition: none;
-            color: @crust;
-            background: @mauve;
-        }
+          #workspaces {
+              margin-top: 6px;
+              margin-left: 12px;
+              margin-bottom: 0px;
+              border-radius: 12px;
+              background: @mantle;
+              transition: none;
+          }
 
-        #bluetooth {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            padding-right: 14px;
-            margin-bottom: 0px;
-            border-radius: 10px;
-            transition: none;
-            color: @crust;
-            background: @blue;
-        }
+          #workspaces button {
+              transition: none;
+              color: @text;
+              background: transparent;
+              font-size: 16px;
+              font-weight: bold;
+              border-radius: 12px;
+          }
 
-        #pulseaudio {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            padding-right: 10px;
-            margin-bottom: 0px;
-            border-radius: 10px;
-            transition: none;
-            color: @crust;
-            background: @yellow;
-        }
+          #workspaces button:hover {
+              transition: none;
+              box-shadow: inherit;
+              text-shadow: inherit;
+              border-color: @maroon;
+              color: @peach;
+          }
 
-        #battery {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            padding-right: 10px;
-            margin-bottom: 0px;
-            border-radius: 10px;
-            transition: none;
-            color: @crust;
-            background: @teal;
-        }
+          #workspaces button.active {
+              transition: none;
+              color: @crust;
+              background: @peach;
+              font-size: 4px;
+          }
 
-        #battery.charging, #battery.plugged {
-            color: @crust;
-            background-color: @teal;
-        }
+          #workspaces button.active:hover {
+              color: @mauve;
+          }
 
-        #battery.critical:not(.charging) {
-            background-color: @teal;
-            color: @crust;
-            animation-name: blink;
-            animation-duration: 0.5s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-        }
+          #network {
+              margin-top: 6px;
+              margin-left: 8px;
+              padding-left: 10px;
+              padding-right: 17px;
+              margin-bottom: 0px;
+              border-radius: 10px;
+              transition: none;
+              color: @crust;
+              background: @mauve;
+          }
 
-        @keyframes blink {
-            to {
-                background-color: @red;
-                color: @teal;
-            }
-        }
+          #bluetooth {
+              margin-top: 6px;
+              margin-left: 8px;
+              padding-left: 10px;
+              padding-right: 12px;
+              margin-bottom: 0px;
+              border-radius: 10px;
+              transition: none;
+              color: @crust;
+              background: @blue;
+          }
 
-        #clock {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            padding-right: 10px;
-            margin-bottom: 0px;
-            border-radius: 10px;
-            transition: none;
-            color: @crust;
-            background: @green;
-        }
+          #pulseaudio {
+              margin-top: 6px;
+              margin-left: 8px;
+              padding-left: 10px;
+              padding-right: 10px;
+              margin-bottom: 0px;
+              border-radius: 10px;
+              transition: none;
+              color: @crust;
+              background: @yellow;
+          }
 
-        #tray {
-            margin-top: 6px;
-            margin-left: 8px;
-            padding-left: 10px;
-            margin-bottom: 0px;
-            padding-right: 10px;
-            border-radius: 10px;
-            transition: none;
-            color: @teal;
-            background: @crust;
-        }
+          #battery {
+              margin-top: 6px;
+              margin-left: 8px;
+              padding-left: 10px;
+              padding-right: 10px;
+              margin-bottom: 0px;
+              border-radius: 10px;
+              transition: none;
+              color: @crust;
+              background: @teal;
+          }
 
-        #custom-power {
-            margin-top: 6px;
-            margin-left: 8px;
-            margin-right: 8px;
-            padding-left: 10px;
-            padding-right: 14px;
-            margin-bottom: 0px;
-            border-radius: 10px;
-            transition: none;
-            color: @crust;
-            background: @red;
-        }
-      '';
+          #battery.charging, #battery.plugged {
+              color: @crust;
+              background-color: @teal;
+          }
+
+          #battery.critical:not(.charging) {
+              background-color: @teal;
+              color: @crust;
+              animation-name: blink;
+              animation-duration: 0.5s;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite;
+              animation-direction: alternate;
+          }
+
+          @keyframes blink {
+              to {
+                  background-color: @red;
+                  color: @teal;
+              }
+          }
+
+          #clock {
+              margin-top: 6px;
+              margin-left: 8px;
+              padding-left: 10px;
+              padding-right: 10px;
+              margin-bottom: 0px;
+              border-radius: 10px;
+              transition: none;
+              color: @crust;
+              background: @green;
+          }
+
+          #tray {
+              margin-top: 6px;
+              margin-left: 8px;
+              padding-left: 10px;
+              margin-bottom: 0px;
+              padding-right: 10px;
+              border-radius: 10px;
+              transition: none;
+              color: @teal;
+              background: @crust;
+          }
+
+          #custom-power {
+              margin-top: 6px;
+              margin-left: 8px;
+              margin-right: 8px;
+              padding-left: 10px;
+              padding-right: 14px;
+              margin-bottom: 0px;
+              border-radius: 10px;
+              transition: none;
+              color: @crust;
+              background: @red;
+          }
+        '';
     };
   };
 }
