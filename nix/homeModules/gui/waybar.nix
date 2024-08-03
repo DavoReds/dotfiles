@@ -56,7 +56,6 @@ in {
             "bluetooth"
             "pulseaudio"
             "battery"
-            "custom/power"
           ];
 
           clock = {
@@ -139,11 +138,6 @@ in {
             format-charging-low = "󱊤 {capacity}%";
             format-discharging-critical = "󰂎 {capacity}%";
             format-charging-critical = "󰢟 {capacity}%";
-          };
-
-          "custom/power" = {
-            format = "⏻";
-            on-click = "power-menu";
           };
         };
       };
@@ -255,6 +249,7 @@ in {
           #battery {
               margin-top: 6px;
               margin-left: 8px;
+              margin-right: 8px;
               padding-left: 10px;
               padding-right: 10px;
               margin-bottom: 0px;
@@ -308,19 +303,6 @@ in {
               transition: none;
               color: @teal;
               background: @crust;
-          }
-
-          #custom-power {
-              margin-top: 6px;
-              margin-left: 8px;
-              margin-right: 8px;
-              padding-left: 10px;
-              padding-right: 14px;
-              margin-bottom: 0px;
-              border-radius: 10px;
-              transition: none;
-              color: @crust;
-              background: @red;
           }
         '';
     };
