@@ -9,13 +9,13 @@ in {
   options.kitty.enable = mkEnableOption "Configures Kitty";
 
   config = mkIf cfg.enable {
-    stylix.targets.kitty = {
-      enable = true;
-      variant256Colors = true;
-    };
-
     programs.kitty = {
       enable = true;
+      catppuccin = {
+        enable = true;
+        flavor = "mocha";
+      };
+
       shellIntegration = {
         enableZshIntegration = true;
       };

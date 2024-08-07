@@ -37,14 +37,20 @@
     accent = "peach";
     flavor = "mocha";
   };
-  defaultStylix.enable = true;
-  stylix.targets.gtk.enable = true;
   gtk = {
     enable = true;
-    catppuccin.icon = {
+    catppuccin = {
       enable = true;
       accent = "peach";
       flavor = "mocha";
+      size = "standard";
+      tweaks = ["normal"];
+
+      icon = {
+        enable = true;
+        accent = "peach";
+        flavor = "mocha";
+      };
     };
   };
   qtConfig.enable = true;

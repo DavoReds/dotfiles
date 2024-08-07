@@ -144,14 +144,6 @@
   # Podman
   podman.enable = true;
 
-  # Stylix
-  stylix = {
-    homeManagerIntegration = {
-      autoImport = false;
-      followSystem = false;
-    };
-  };
-
   # Fonts
   fonts = {
     enableDefaultPackages = true;

@@ -20,7 +20,5 @@
       gnome.gnome-tweaks
       gnome-extension-manager
     ];
-
-    stylix.targets.gnome.enable = true;
   };
 }

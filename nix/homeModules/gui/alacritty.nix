@@ -20,10 +20,12 @@
   };
 
   config = lib.mkIf config.alacritty.enable {
-    stylix.targets.alacritty.enable = true;
-
     programs.alacritty = {
       enable = true;
+      catppuccin = {
+        enable = true;
+        flavor = "mocha";
+      };
 
       settings = {
         env = {

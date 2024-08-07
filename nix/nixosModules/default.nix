@@ -29,7 +29,5 @@
     ./services/nextdns.nix
     ./services/openssh.nix
     ./services/rdp.nix
-
-    ../stylix/default-stylix.nix
   ];
 }

@@ -28,9 +28,6 @@
     };
   };
 
-  # Theming
-  defaultStylix.enable = true;
-
   # Allow home-manager to configure XDG directories
   home.preferXdgDirectories = true;
   xdg = {

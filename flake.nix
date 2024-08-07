@@ -20,14 +20,6 @@
     };
 
     catppuccin.url = "github:catppuccin/nix";
-
-    stylix = {
-      url = "github:danth/stylix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        home-manager.follows = "home-manager";
-      };
-    };
   };
 
   outputs = {
@@ -47,7 +39,6 @@
           ./nix/hosts/dalinux/configuration.nix
           ./nix/nixosModules
           inputs.disko.nixosModules.default
-          inputs.stylix.nixosModules.stylix
         ];
       };
 
@@ -58,7 +49,6 @@
         modules = [
           ./nix/hosts/ferroserver/configuration.nix
           ./nix/nixosModules
-          inputs.stylix.nixosModules.stylix
         ];
       };
     };
@@ -72,7 +62,6 @@
           ./nix/homes/dalia/home.nix
           ./nix/homeModules
           inputs.catppuccin.homeManagerModules.catppuccin
-          inputs.stylix.homeManagerModules.stylix
         ];
       };
 
@@ -84,7 +73,6 @@
           ./nix/homes/jofero/home.nix
           ./nix/homeModules
           inputs.catppuccin.homeManagerModules.catppuccin
-          inputs.stylix.homeManagerModules.stylix
         ];
       };
 
@@ -96,7 +84,6 @@
           ./nix/homes/samuel/home.nix
           ./nix/homeModules
           inputs.catppuccin.homeManagerModules.catppuccin
-          inputs.stylix.homeManagerModules.stylix
         ];
       };
     };
