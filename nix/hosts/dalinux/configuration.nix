@@ -166,7 +166,7 @@
       enable = true;
       defaultFonts = {
         monospace = ["IosevkaTerm Nerd Font"];
-        sansSerif = ["Poppins" "Noto Sans"];
+        sansSerif = ["Iosevka Comfy" "Noto Sans"];
         serif = ["Noto Serif"];
       };
     };
