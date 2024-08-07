@@ -21,6 +21,11 @@ in {
       };
 
       settings = {
+        font_family = "IosevkaTerm Nerd Font";
+        font_size = "14.0";
+
+        background_opacity = "0.9";
+
         scrollback_lines = 100;
 
         mouse_hide_wait = -1;
