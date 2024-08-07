@@ -1,4 +1,5 @@
 {
+  lib,
   config,
   pkgs,
   ...
@@ -16,6 +17,10 @@
     "$HOME/.local/bin"
     "$HOME/.cargo/bin"
   ];
+  home.sessionVariables = {
+    XCURSOR_SIZE = "24";
+    HYPRCURSOR_SIZE = lib.mkForce "24";
+  };
   home.shellAliases = {
     docker-compose = "podman-compose";
     pj = "pijul";
