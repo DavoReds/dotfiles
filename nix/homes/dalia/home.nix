@@ -32,6 +32,11 @@
   };
 
   # Theming
+  catppuccin.pointerCursor = {
+    enable = true;
+    accent = "peach";
+    flavor = "mocha";
+  };
   defaultStylix.enable = true;
   stylix.targets.gtk.enable = true;
   gtk = {

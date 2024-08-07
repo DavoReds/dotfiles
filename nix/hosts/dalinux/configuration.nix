@@ -145,7 +145,6 @@
   podman.enable = true;
 
   # Stylix
-  defaultStylix.enable = true;
   stylix = {
     homeManagerIntegration = {
       autoImport = false;

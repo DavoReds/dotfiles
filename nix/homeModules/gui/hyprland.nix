@@ -66,8 +66,6 @@ in {
       settings = {
         env = [
           "NIXOS_OZONE_WL,1"
-          "HYPRCURSOR_THEME,catppuccin-mocha-peach-cursors"
-          "HYPRCURSOR_SIZE,24"
         ];
 
         exec-once = [

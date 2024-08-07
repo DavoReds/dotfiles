@@ -14,12 +14,6 @@
       base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
       polarity = "dark";
 
-      cursor = {
-        package = pkgs.catppuccin-cursors.mochaPeach;
-        name = "catppuccin-mocha-peach-cursors";
-        size = 24;
-      };
-
       fonts = {
         emoji = {
           package = pkgs.noto-fonts-emoji;
