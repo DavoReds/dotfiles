@@ -147,13 +147,29 @@
   # Fonts
   fonts = {
     enableDefaultPackages = true;
-    fontconfig.enable = true;
+    fontDir.enable = true;
 
     packages = with pkgs; [
       inter
+      iosevka-comfy.comfy
       noto-fonts
       poppins
+
+      (nerdfonts.override {
+        fonts = [
+          "IosevkaTerm"
+        ];
+      })
     ];
+
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        monospace = ["IosevkaTerm Nerd Font"];
+        sansSerif = ["Poppins" "Noto Sans"];
+        serif = ["Noto Serif"];
+      };
+    };
   };
 
   system.stateVersion = "24.11";

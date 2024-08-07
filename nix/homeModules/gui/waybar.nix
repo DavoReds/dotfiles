@@ -64,7 +64,7 @@ in {
             timezone = "America/Bogota";
             locale = "es_CO.UTF-8";
             tooltip = true;
-            tooltip-format = "<span size='12px' font='Iosevka Nerd Font'>{calendar}</span>";
+            tooltip-format = "<span size='12px' font='IosevkaTerm Nerd Font'>{calendar}</span>";
 
             calendar = {
               mode = "month";
@@ -150,7 +150,7 @@ in {
           * {
             border: none;
             border-radius: 10px;
-            font-family: Iosevka Nerd Font;
+            font-family: IosevkaTerm Nerd Font;
             font-size: 15px;
             min-height: 10px;
           }

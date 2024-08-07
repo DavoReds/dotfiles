@@ -35,7 +35,7 @@ in {
           set -g @catppuccin_status_modules_left ""
 
           set -g @catppuccin_directory_text "#{pane_current_path}"
-          set -g @catppuccin_directory_icon " "
+          set -g @catppuccin_directory_icon ""
         '';
       };
 
