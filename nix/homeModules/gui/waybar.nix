@@ -204,10 +204,6 @@ in {
               background: @peach;
           }
 
-          #workspaces button.active:hover {
-              color: @mauve;
-          }
-
           #network {
               margin-top: 6px;
               margin-left: 8px;
