@@ -1,5 +1,4 @@
 {
-  lib,
   config,
   pkgs,
   ...
@@ -17,6 +16,12 @@
     "$HOME/.local/bin"
     "$HOME/.cargo/bin"
   ];
+  home.sessionVariables = {
+    XCURSOR_THEME = "catppuccin-mocha-peach-cursors";
+    XCURSOR_SIZE = "24";
+    HYPRCURSOR_THEME = "catppuccin-mocha-peach-cursors";
+    HYPRCURSOR_SIZE = "24";
+  };
   home.shellAliases = {
     docker-compose = "podman-compose";
     pj = "pijul";

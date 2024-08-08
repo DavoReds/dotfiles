@@ -155,6 +155,15 @@
         ];
       })
     ];
+
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        monospace = ["IosevkaTerm Nerd Font"];
+        sansSerif = ["Iosevka Comfy" "Noto Sans"];
+        serif = ["Noto Serif"];
+      };
+    };
   };
 
   system.stateVersion = "24.11";
