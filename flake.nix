@@ -20,6 +20,11 @@
     };
 
     catppuccin.url = "github:catppuccin/nix";
+
+    nixos-cosmic = {
+      url = "github:lilyinstarlight/nixos-cosmic";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -39,6 +44,14 @@
           ./nix/hosts/dalinux/configuration.nix
           ./nix/nixosModules
           inputs.disko.nixosModules.default
+
+          {
+            nix.settings = {
+              substituters = ["https://cosmic.cachix.org/"];
+              trusted-public-keys = ["cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="];
+            };
+          }
+          inputs.nixos-cosmic.nixosModules.default
         ];
       };
 
