@@ -13,13 +13,10 @@
   systemd-boot.enable = true;
 
   # Login manager
-  sddm.enable = true;
+  services.displayManager.cosmic-greeter.enable = true;
 
-  # Window manager
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
+  # Desktop environment
+  services.desktopManager.cosmic.enable = true;
 
   # Audio
   audio.enable = true;
