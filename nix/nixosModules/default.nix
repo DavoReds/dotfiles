@@ -26,6 +26,7 @@
     ./software/xfce.nix
 
     ./services/jellyfin.nix
+    ./services/kanata.nix
     ./services/nextdns.nix
     ./services/openssh.nix
     ./services/rdp.nix
