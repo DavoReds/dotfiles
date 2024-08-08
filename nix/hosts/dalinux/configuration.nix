@@ -122,9 +122,6 @@
     flake = "/home/dalia/dotfiles";
   };
 
-  # Thunar
-  thunar.enable = true;
-
   # Zsh integration
   programs.zsh.enable = true;
 
@@ -158,15 +155,6 @@
         ];
       })
     ];
-
-    fontconfig = {
-      enable = true;
-      defaultFonts = {
-        monospace = ["IosevkaTerm Nerd Font"];
-        sansSerif = ["Iosevka Comfy" "Noto Sans"];
-        serif = ["Noto Serif"];
-      };
-    };
   };
 
   system.stateVersion = "24.11";

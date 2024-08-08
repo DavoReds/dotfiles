@@ -17,10 +17,6 @@
     "$HOME/.local/bin"
     "$HOME/.cargo/bin"
   ];
-  home.sessionVariables = {
-    XCURSOR_SIZE = "24";
-    HYPRCURSOR_SIZE = lib.mkForce "24";
-  };
   home.shellAliases = {
     docker-compose = "podman-compose";
     pj = "pijul";
@@ -45,12 +41,6 @@
   gtk = {
     enable = true;
     catppuccin = {
-      enable = true;
-      accent = "peach";
-      flavor = "mocha";
-      size = "standard";
-      tweaks = ["normal"];
-
       icon = {
         enable = true;
         accent = "peach";
@@ -59,66 +49,6 @@
     };
   };
   qtConfig.enable = true;
-
-  # Hyprland stuff
-  hyprland = {
-    enable = true;
-    monitors = [
-      {
-        name = "eDP-1";
-        width = 1366;
-        height = 768;
-        refreshRate = 60;
-        x = 1920;
-        y = 0;
-        scale = 1;
-        defaultWorkspace = 10;
-        enabled = true;
-      }
-
-      {
-        name = "HDMI-A-1";
-        width = 1920;
-        height = 1080;
-        refreshRate = 60;
-        x = 0;
-        y = 0;
-        scale = 1;
-        defaultWorkspace = 1;
-        enabled = true;
-      }
-    ];
-  };
-  mako.enable = true;
-  services.hyprpaper = {
-    enable = true;
-    settings = {
-      ipc = "on";
-      splash = false;
-
-      preload = [
-        "/home/dalia/Imágenes/Fondos/earth.png"
-        "/home/dalia/Imágenes/Fondos/dice.png"
-      ];
-
-      wallpaper = [
-        "eDP-1,/home/dalia/Imágenes/Fondos/earth.png"
-        "HDMI-A-1,/home/dalia/Imágenes/Fondos/dice.png"
-      ];
-    };
-  };
-  tofi.enable = true;
-  waybar = {
-    enable = true;
-    battery = "BAT0";
-    monitor = {
-      name = "eDP-1";
-      width = 1366;
-    };
-  };
-  cliphist.enable = true;
-  swappy.enable = true;
-  swaylock.enable = true;
 
   # Allow home-manager to configure XDG directories
   home.preferXdgDirectories = true;
@@ -263,7 +193,6 @@
     obsidian
     onlyoffice-bin_latest
     ouch
-    overskride
     parallel
     pavucontrol
     pijul
