@@ -21,7 +21,7 @@ in {
             )
 
             (defalias
-              escctrl (tap-hold 200 200 esc lctrl)
+              escctrl (tap-hold 100 150 esc lctrl)
             )
 
             (deflayer base
