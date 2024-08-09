@@ -203,6 +203,11 @@
 
           tinymist = {
             command = "tinymist";
+            config = {
+              exportPdf = "never";
+              formatterMode = "typstyle";
+              formatterPrintWidth = 80;
+            };
           };
         };
 
@@ -549,10 +554,6 @@
               unit = "  ";
             };
             language-servers = ["tinymist"];
-            formatter = {
-              command = "typstfmt";
-              args = ["-o" "-"];
-            };
             auto-format = true;
           }
 
