@@ -30,12 +30,20 @@
 
       options = {
         adjust-open = "best-fit";
+        pages-per-row = 1;
+        scroll-page-aware = "true";
+        scroll-full-overlap = "0.01";
+        scroll-step = 100;
         sandbox = "none";
-        selection-clipboard = "clipboard";
+        selection-notification = "false";
+
+        guioptions = "";
+        zoom-min = 10;
         statusbar-h-padding = 0;
         statusbar-v-padding = 0;
         page-padding = 0;
         font = "Iosevka Comfy";
+        recolor-reverse-video = "true";
       };
     };
   };
