@@ -33,7 +33,7 @@
         username = {
           style_root = "bold green";
           style_user = "bold peach";
-          format = "[$user]($style)";
+          format = "[󰉊 ]($style)";
           show_always = true;
         };
 

@@ -189,6 +189,7 @@
   home.packages = with pkgs; [
     bleachbit
     calibre
+    chromium
     discord
     du-dust
     git-crypt
