@@ -193,6 +193,7 @@
     du-dust
     git-crypt
     heroic
+    inkscape
     jq
     kondo
     obsidian
