@@ -197,8 +197,8 @@
     inkscape
     jq
     kondo
+    libreoffice-fresh
     obsidian
-    onlyoffice-bin_latest
     ouch
     parallel
     pavucontrol
