@@ -78,15 +78,15 @@
         "application/epub+zip" = "org.pwmt.zathura.desktop";
 
         # Office
-        "application/msword" = "onlyoffice-desktopeditors.desktop";
-        "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = "onlyoffice-desktopeditors.desktop";
+        "application/msword" = "writer.desktop";
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = "writer.desktop";
 
-        "application/vnd.ms-excel" = "onlyoffice-desktopeditors.desktop";
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" = "onlyoffice-desktopeditors.desktop";
-        "text/csv" = "onlyoffice-desktopeditors.desktop";
+        "application/vnd.ms-excel" = "calc.desktop";
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" = "calc.desktop";
+        "text/csv" = "calc.desktop";
 
-        "application/vnd.ms-powerpoint" = "onlyoffice-desktopeditors.desktop";
-        "application/vnd.openxmlformats-officedocument.presentationml.presentation" = "onlyoffice-desktopeditors.desktop";
+        "application/vnd.ms-powerpoint" = "impress.desktop";
+        "application/vnd.openxmlformats-officedocument.presentationml.presentation" = "impress.desktop";
 
         # Browser stuff
         "text/html" = "firefox.desktop";
