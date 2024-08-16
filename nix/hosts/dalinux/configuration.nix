@@ -37,10 +37,7 @@
   };
 
   # Wine
-  wine = {
-    enable = true;
-    wayland = true;
-  };
+  wine.enable = true;
 
   # Gaming
   gaming = {
