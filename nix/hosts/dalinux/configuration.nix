@@ -104,6 +104,7 @@
 
   # Other packages
   environment.systemPackages = with pkgs; [
+    bottles
     curl
     ffmpeg-full
     file
@@ -116,7 +117,6 @@
     vim
     vlc
     wget
-    wl-clipboard
   ];
 
   # Flatpak
