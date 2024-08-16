@@ -19,6 +19,10 @@
         border = "no";
       };
 
+      scripts = [
+        pkgs.mpvScripts.mpris
+      ];
+
       profiles = {
         "1080p" = {
           ytdl-format = "(bestvideo[height<=1080]+bestaudio)[ext=webm]/bestvideo[height<=1080]+bestaudio/best[height<=1080]/bestvideo+bestaudio/best";
