@@ -36,6 +36,12 @@
     };
   };
 
+  # Wine
+  wine = {
+    enable = true;
+    wayland = true;
+  };
+
   # Gaming
   gaming = {
     enable = true;

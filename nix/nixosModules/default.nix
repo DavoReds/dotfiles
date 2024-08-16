@@ -23,6 +23,7 @@
     ./software/sddm.nix
     ./software/systemd-boot.nix
     ./software/thunar.nix
+    ./software/wine.nix
     ./software/xfce.nix
 
     ./services/jellyfin.nix
