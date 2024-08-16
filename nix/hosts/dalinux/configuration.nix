@@ -36,9 +36,6 @@
     };
   };
 
-  # Wine
-  wine.enable = true;
-
   # Gaming
   gaming = {
     enable = true;
