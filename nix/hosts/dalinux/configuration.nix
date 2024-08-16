@@ -144,8 +144,8 @@
     fontDir.enable = true;
 
     packages = with pkgs; [
-      inter
       iosevka-comfy.comfy
+      libertinus
       noto-fonts
       poppins
 
