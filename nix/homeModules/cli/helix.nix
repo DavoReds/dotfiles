@@ -130,16 +130,19 @@
       languages = {
         use-grammars = {
           only = [
+            "bash"
             "c"
             "css"
             "docker-compose"
             "dockerfile"
+            "env"
             "git-attributes"
             "git-commit"
             "git-ignore"
             "git-rebase"
             "go"
             "gomod"
+            "gotmpl"
             "html"
             "javascript"
             "jinja"
@@ -155,6 +158,7 @@
             "mermaid"
             "nix"
             "python"
+            "regex"
             "ron"
             "rust"
             "sql"
@@ -166,7 +170,6 @@
             "xml"
             "yaml"
             "zig"
-            "bash"
           ];
         };
 
