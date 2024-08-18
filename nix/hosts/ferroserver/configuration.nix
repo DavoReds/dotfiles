@@ -81,11 +81,20 @@
     ];
   };
 
+  # Samba account
+  users.groups.sambagroup = {};
+  users.users.samba = {
+    isNormalUser = true;
+    home = "/home/samba";
+    createHome = true;
+    extraGroups = ["sambagroup"];
+  };
+
   # User accounts
   users.users.jofero = {
     isNormalUser = true;
     description = "José Fernando Rojas Padilla";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "sambagroup"];
     hashedPassword = "$6$zEs3NI43EuOAFDPy$lUQsz/R8y2P2B6VeCnlcfDcSBcxTYi0xe0KmBqAYh5SESCkxeLvzCz1Lie1wAE76SubuplEIVHEjbtUjFsv9z0";
     shell = pkgs.zsh;
     openssh.authorizedKeys.keys = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ/zf4ZDZcBddykfGY4Ygl51GyAqRAxUWSzsF5kAH1Wm daliarojasvallejo@proton.me"];
@@ -94,7 +103,7 @@
   users.users.samuel = {
     isNormalUser = true;
     description = "Samuel David Rojas Vallejo";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "sambagroup"];
     hashedPassword = "$6$qAL2fBLScfBt94QR$XtMJz16I9vFiMz66Zlan2uhybf1toI1nI6tzTwM1ORe821wwfvRUgb5pqLUn.bdrTwZLlEARTrQLzAyn7sf5w1";
     shell = pkgs.zsh;
     openssh.authorizedKeys.keys = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ/zf4ZDZcBddykfGY4Ygl51GyAqRAxUWSzsF5kAH1Wm daliarojasvallejo@proton.me"];
@@ -180,6 +189,49 @@
         ];
       })
     ];
+  };
+
+  # Samba configuration
+  services = {
+    samba = {
+      enable = true;
+      openFirewall = true;
+      extraConfig = ''
+        server role = standalone server
+        map to guest = Bad User
+        usershare allow guests = yes
+        hosts allow = 192.168.0.0/16
+        hosts deny = 0.0.0.0/0
+        server min protocol = SMB3_00
+      '';
+
+      shares = {
+        ferroserver = {
+          path = "/home/samba";
+          browseable = "yes";
+          "read only" = "no";
+          "guest ok" = "yes";
+          "force user" = "samba";
+          "force group" = "sambagroup";
+          "create mask" = "0770";
+          "directory mask" = "2770";
+        };
+      };
+    };
+
+    avahi = {
+      enable = true;
+      publish.enable = true;
+      publish.userServices = true;
+      nssmdns4 = true;
+      nssmdns6 = true;
+      openFirewall = true;
+    };
+
+    samba-wsdd = {
+      enable = true;
+      openFirewall = true;
+    };
   };
 
   system.stateVersion = "24.11";
