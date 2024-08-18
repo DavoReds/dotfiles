@@ -208,5 +208,6 @@
     speedtest-go
     tealdeer
     thunderbird-128
+    ticktick
   ];
 }
