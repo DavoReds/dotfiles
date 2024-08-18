@@ -98,6 +98,7 @@
   # Other packages
   environment.systemPackages = with pkgs; [
     bottles
+    cifs-utils 
     curl
     ffmpeg-full
     file
@@ -105,6 +106,7 @@
     htop
     mkvtoolnix
     mpv
+    psmisc
     python3
     unzip
     vim
