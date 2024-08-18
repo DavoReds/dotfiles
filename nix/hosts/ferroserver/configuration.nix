@@ -77,7 +77,6 @@
   printer = {
     enable = true;
     drivers = with pkgs; [
-      gutenprint
       epson_201207w
     ];
   };
@@ -132,7 +131,6 @@
   # NH
   programs.nh = {
     enable = true;
-    clean.enable = true;
     flake = "/home/samuel/dotfiles";
   };
 
@@ -168,6 +166,7 @@
   # Fonts
   fonts = {
     enableDefaultPackages = true;
+    fontDir.enable = true;
     fontconfig.enable = true;
 
     packages = with pkgs; [

@@ -73,7 +73,6 @@
   printer = {
     enable = true;
     drivers = with pkgs; [
-      gutenprint
       epson_201207w
     ];
   };
