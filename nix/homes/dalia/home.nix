@@ -171,6 +171,7 @@
   eza.enable = true;
   programs.fastfetch.enable = true;
   programs.fd.enable = true;
+  programs.pandoc.enable = true;
   ncspot.enable = true;
   pass.enable = true;
   restic.enable = true;
