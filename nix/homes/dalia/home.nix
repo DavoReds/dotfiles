@@ -183,6 +183,7 @@
     wayland = true;
   };
   mpv.enable = true;
+  programs.freetube.enable = true;
   zathura.enable = true;
 
   # Extra stuff
