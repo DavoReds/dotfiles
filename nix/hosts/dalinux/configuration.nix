@@ -21,20 +21,8 @@
   # Audio
   audio.enable = true;
 
-  # Battery Optimizations
-  battery = {
-    enable = true;
-    charger = {
-      governor = "performance";
-      epp = "performance";
-      turbo = "auto";
-    };
-    battery = {
-      governor = "powersave";
-      epp = "power";
-      turbo = "auto";
-    };
-  };
+  # System76 Optimizations
+  hardware.system76.enableAll = true;
 
   # Gaming
   gaming = {
@@ -98,7 +86,7 @@
   # Other packages
   environment.systemPackages = with pkgs; [
     bottles
-    cifs-utils 
+    cifs-utils
     curl
     ffmpeg-full
     file
