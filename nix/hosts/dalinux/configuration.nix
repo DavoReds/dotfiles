@@ -21,8 +21,20 @@
   # Audio
   audio.enable = true;
 
-  # System76 Optimizations
-  hardware.system76.enableAll = true;
+  # Battery optimizations
+  battery = {
+    enable = true;
+    charger = {
+      governor = "performance";
+      epp = "performance";
+      turbo = "auto";
+    };
+    battery = {
+      governor = "powersave";
+      epp = "power";
+      turbo = "auto";
+    };
+  };
 
   # Gaming
   gaming = {
