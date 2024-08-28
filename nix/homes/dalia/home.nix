@@ -89,11 +89,11 @@
         "application/vnd.openxmlformats-officedocument.presentationml.presentation" = "impress.desktop";
 
         # Browser stuff
-        "text/html" = "firefox.desktop";
-        "x-scheme-handler/about" = "firefox.desktop";
-        "x-scheme-handler/http" = "firefox.desktop";
-        "x-scheme-handler/https" = "firefox.desktop";
-        "x-scheme-handler/unknown" = "firefox.desktop";
+        "text/html" = "io.github.zen_browser.zen.desktop";
+        "x-scheme-handler/about" = "io.github.zen_browser.zen.desktop";
+        "x-scheme-handler/http" = "io.github.zen_browser.zen.desktop";
+        "x-scheme-handler/https" = "io.github.zen_browser.zen.desktop";
+        "x-scheme-handler/unknown" = "io.github.zen_browser.zen.desktop";
 
         # Images
         "image/gif" = "imv.desktop";
