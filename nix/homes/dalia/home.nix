@@ -204,6 +204,7 @@
     parallel
     pavucontrol
     pijul
+    qalculate-gtk
     rclone
     ripgrep
     speedtest-go
