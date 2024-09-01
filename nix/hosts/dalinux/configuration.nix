@@ -155,8 +155,5 @@
     };
   };
 
-  # Remapping the caps lock key
-  kanata.enable = true;
-
   system.stateVersion = "24.11";
 }
