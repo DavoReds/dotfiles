@@ -56,7 +56,10 @@
   };
 
   # Firewall
-  networking.firewall.enable = true;
+  networking.firewall = {
+    enable = true;
+    allowPing = true;
+  };
 
   # DNS over TLS
   nextdns = {
@@ -195,37 +198,30 @@
   services = {
     samba = {
       enable = true;
+      securityType = "user";
       openFirewall = true;
-      extraConfig = ''
-        server role = standalone server
-        map to guest = Bad User
-        usershare allow guests = yes
-        hosts allow = 192.168.0.0/16
-        hosts deny = 0.0.0.0/0
-        server min protocol = SMB3_00
-      '';
-
-      shares = {
-        ferroserver = {
-          path = "/home/samba";
-          browseable = "yes";
-          "read only" = "no";
-          "guest ok" = "yes";
-          "force user" = "samba";
-          "force group" = "sambagroup";
-          "create mask" = "0770";
-          "directory mask" = "2770";
+      settings = {
+        global = {
+          "server role" = "standalone server";
+          "map to guest" = "Bad User";
+          "usershare allow guests" = "yes";
+          "hosts allow" = "192.168.0.0/16";
+          "hosts deny" = "0.0.0.0/0";
+          "server min protocol" = "SMB3_00";
+          "security" = "user";
         };
       };
-    };
 
-    avahi = {
-      enable = true;
-      publish.enable = true;
-      publish.userServices = true;
-      nssmdns4 = true;
-      nssmdns6 = true;
-      openFirewall = true;
+      "ferroserver" = {
+        "path" = "/home/samba";
+        "browseable" = "yes";
+        "read only" = "no";
+        "guest ok" = "yes";
+        "force user" = "samba";
+        "force group" = "sambagroup";
+        "create mask" = "0770";
+        "directory mask" = "2770";
+      };
     };
 
     samba-wsdd = {
