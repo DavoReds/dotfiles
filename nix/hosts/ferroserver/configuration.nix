@@ -210,17 +210,16 @@
           "server min protocol" = "SMB3_00";
           "security" = "user";
         };
-      };
-
-      "ferroserver" = {
-        "path" = "/home/samba";
-        "browseable" = "yes";
-        "read only" = "no";
-        "guest ok" = "yes";
-        "force user" = "samba";
-        "force group" = "sambagroup";
-        "create mask" = "0770";
-        "directory mask" = "2770";
+        "ferroserver" = {
+          "path" = "/home/samba";
+          "browseable" = "yes";
+          "read only" = "no";
+          "guest ok" = "yes";
+          "force user" = "samba";
+          "force group" = "sambagroup";
+          "create mask" = "0770";
+          "directory mask" = "2770";
+        };
       };
     };
 
